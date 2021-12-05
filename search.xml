@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/12/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>指针终结者</title>
+    <url>/2021/12/05/%E6%8C%87%E9%92%88%E7%BB%88%E7%BB%93%E8%80%85/</url>
+    <content><![CDATA[<h1 id="指针是什么"><a href="#指针是什么" class="headerlink" title="指针是什么"></a>指针是什么</h1><blockquote>
+<p>在计算机科学中，指针是编译程序中的一个对象，利用地址，它的值直接指向存在电脑存储器中另一个地方的值，由于通过地址找到所需的变量单元，可以说，地址指向该变量单元。因此，将地址形象化称为”指针”。<u>意思是通过它能找到以它为地址大的内存单元</u></p>
+</blockquote>
+<span id="more"></span>
+
+<h5 id="总的来说，指针就是一个变量，里面存着内存单元的地址-编号-，指针就是地址。（存放在指针中的值都被当成变量来处理）。"><a href="#总的来说，指针就是一个变量，里面存着内存单元的地址-编号-，指针就是地址。（存放在指针中的值都被当成变量来处理）。" class="headerlink" title="总的来说，指针就是一个变量，里面存着内存单元的地址(编号)，指针就是地址。（存放在指针中的值都被当成变量来处理）。"></a>总的来说，指针就是一个变量，里面存着内存单元的地址(编号)，指针就是地址。（存放在指针中的值都被当成变量来处理）。</h5><h5 id="那么问题是："><a href="#那么问题是：" class="headerlink" title="那么问题是："></a>那么问题是：</h5><ul>
+<li>一个内存单元有多大？(一个字节)</li>
+<li>如何编址？</li>
+</ul>
+<p>一个内存单元一个字节就够了，然后不同数据类型的数据存储就按照字节由低到高排就行。比如，浮点型8个字节，它就会使用8个连续的内存单元，然后第一个内存单元就是其地址。</p>
+<p>经过研究发现，一个字节给一个对应的地址是比较合适的。</p>
+<p>对于32位的机器，假如有32根地址线，那么假设每根地址线在寻址的是产生一个电信号正电或者负电(1或者0)，那么32根地址线产生的地址就会是32个全0到32个全1，也就是说一共会产生$2^{32}$个地址。</p>
+<h5 id="这里我们就能明白"><a href="#这里我们就能明白" class="headerlink" title="这里我们就能明白"></a>这里我们就能明白</h5><ul>
+<li>在32位的操作系统中，地址是32个0或者1组成的二进制序列，那地址就得使用4个字节的空间来存储，所以一个指针变量的大小就应该是4个字节</li>
+<li>在64位的操作系统中，则是8个字节。</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><blockquote>
+<ul>
+<li>指针是用来存放地址的，地址是唯一标识一块地址空间的。</li>
+<li>指针的大小在32位系统中是4个字节，64位系统中是8个字节。</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="指针和指针类型"><a href="#指针和指针类型" class="headerlink" title="指针和指针类型"></a>指针和指针类型</h1><blockquote>
+<p>通过上述可知(以32位为例)，所有类型的指针都是4个字节，那不禁有个问题：是不是可以用一个范型的指针来代替所有的指针就可以呢？</p>
+</blockquote>
+<p>通过代码验证可知，不同指针类型可以进行对指针的存储，但是会警告。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">0x11223344</span>;</span><br><span class="line"><span class="keyword">int</span>* pa = &amp;a;</span><br><span class="line">*pa = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>这个是运行结果是，a所有字节的值都变成了0，也就是44 33 22 11 变成了 00 00 00 00</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">\\代码<span class="number">2</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">0x11223344</span>;</span><br><span class="line"><span class="keyword">int</span>* pc = &amp;a;</span><br><span class="line">*pc = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>这个运行的结果就不一样了，44 33 22 11 变成了 00 33 22 11，也就只对数据a的其中一个字节进行了赋值操作。</p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><blockquote>
+<p>指针类型决定了指针进行解引用操作的时候，能够访问空间的大小。对指针解引用时候有多大的权限(能操作几个字符)。</p>
+<ul>
+<li>int* p; *p能够访问4个字节</li>
+<li>char* p; *p能够访问1个字节</li>
+<li>double* p; *p能够访问8个字节</li>
+</ul>
+</blockquote>
+<h3 id="指针-整数"><a href="#指针-整数" class="headerlink" title="指针+-整数"></a>指针+-整数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">char</span>* pc = &amp;n;</span><br><span class="line"><span class="keyword">int</span>* pi = &amp;n;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, pc);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, pc+<span class="number">1</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, pi);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, pi+<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<p>通过对代码的运行，我们可知，主要是地址的后两位的变化。pc的后两位是58，而pc+1则是59。对于pi来说，它的地址也是58，但是pi+1的结果则是5C。说明pc+1就是往后移动了一个字节，但是pi+1则就是往后移动了4个字节。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//实际操作：将数组的所有元素都变成1，对比输出结果</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="comment">//int *p = arr;   //数组名-首元素的地址</span></span><br><span class="line">    <span class="keyword">char</span> *p = arr;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        *(p+<span class="number">1</span>) = <span class="number">1</span>;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h4><blockquote>
+<p>指针的类型决定了指针向前或者向后走一步有多大(距离)。</p>
+</blockquote>
+<hr>
+<h1 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h1><blockquote>
+<p>概念：野指针就是指针指向的位置是不可知的（随机的、不确定的、没有明确限制的）</p>
+</blockquote>
+<h3 id="野指针形成的原因"><a href="#野指针形成的原因" class="headerlink" title="野指针形成的原因"></a>野指针形成的原因</h3><ol>
+<li>指针未初始化 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> *p; <span class="comment">//局部变量是指针未初始化，默认为随机值</span></span><br><span class="line">*p = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></li>
+<li>指针访问越界 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *p = arr;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">12</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    p++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>指针指向的空间被释放</li>
+</ol>
+<h3 id="如何避免野指针"><a href="#如何避免野指针" class="headerlink" title="如何避免野指针"></a>如何避免野指针</h3><ol>
+<li>指针初始化</li>
+<li>小心指针越界</li>
+<li>指针指向空间释放即使置NULL</li>
+<li>指针使用之前要检查有效性</li>
+</ol>
+<hr>
+<h1 id="指针运算"><a href="#指针运算" class="headerlink" title="指针运算"></a>指针运算</h1><ul>
+<li>指针+-正数</li>
+<li>指针-指针</li>
+<li>指针的关系运算</li>
+</ul>
+<h3 id="指针-—整数"><a href="#指针-—整数" class="headerlink" title="指针+—整数"></a>指针+—整数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N_VALUES 5</span></span><br><span class="line"><span class="keyword">float</span> values[N_VALUES];</span><br><span class="line"><span class="keyword">float</span> *vp;</span><br><span class="line"><span class="keyword">for</span>(vp=&amp;values[<span class="number">0</span>]; vp&lt;values[N_VALUES];)</span><br><span class="line">&#123;</span><br><span class="line">    *vp++ = <span class="number">0</span>; <span class="comment">//这个代码执行是，先*vp=0，然后在vp++</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="指针-指针"><a href="#指针-指针" class="headerlink" title="指针-指针"></a>指针-指针</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">my_strlen</span><span class="params">(<span class="keyword">char</span>* str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//使用头尾指针的方法，尾指针-头指针=指针之间的长度</span></span><br><span class="line">    <span class="keyword">char</span>* start = str;</span><br><span class="line">    <span class="keyword">char</span>* end = str;</span><br><span class="line">    <span class="keyword">while</span>(*end != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        end++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> end-start;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> arr[] = <span class="string">&quot;bit&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> len = my_strlen(arr);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, len);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="标准规定"><a href="#标准规定" class="headerlink" title="标准规定"></a>标准规定</h5><blockquote>
+<p>允许指向数组元素的指针指向数组最后一个元素后面的那个内存位置的指针比较，但是不允许与指向第一个元素之前的那个内存位置的指针进行比较。</p>
+</blockquote>
+<hr>
+<h1 id="指针与数组"><a href="#指针与数组" class="headerlink" title="指针与数组"></a>指针与数组</h1><p>数组名是什么？我们看一个例子：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, arr);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;arr[<span class="number">0</span>]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;arr)</span><br></pre></td></tr></table></figure>
+<p>我们会发现得出来的结果都是一样的，但是他们的含义不一样。</p>
+<h3 id="数组名"><a href="#数组名" class="headerlink" title="数组名"></a>数组名</h3><ul>
+<li>&amp;arr &amp;数组名，表示取出来的是整个数组的地址。</li>
+<li>sizeof(arr)，计算的是整个数组的大小。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, arr);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, arr+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;arr[<span class="number">0</span>]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;arr[<span class="number">0</span>]+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;arr);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;arr+<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<p>其输出结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arr</td>
+<td>00EFF8E0</td>
+</tr>
+<tr>
+<td>arr+1</td>
+<td>00EFF8E4</td>
+</tr>
+<tr>
+<td>&amp;arr[0]</td>
+<td>00EFF8E0</td>
+</tr>
+<tr>
+<td>&amp;arr[0]+1</td>
+<td>00EFF8E4</td>
+</tr>
+<tr>
+<td>&amp;arr</td>
+<td>00EFF8E0</td>
+</tr>
+<tr>
+<td>&amp;arr+1</td>
+<td>00EFF908</td>
+</tr>
+</tbody></table>
+<p>我们通过输出地址可以看出，前两个的+1，都是+1一个元素的大小，但是&amp;arr+1加的则是整个数组的长度。16进制的28，其10进制结果则是40，也就是整个数组的长度。</p>
+]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+</search>
