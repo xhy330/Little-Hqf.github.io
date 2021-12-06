@@ -6,7 +6,7 @@
   <link href="https://little-hqf.github.io/atom.xml" rel="self"/>
   
   <link href="https://little-hqf.github.io/"/>
-  <updated>2021-12-05T03:09:50.589Z</updated>
+  <updated>2021-12-06T07:46:10.111Z</updated>
   <id>https://little-hqf.github.io/</id>
   
   <author>
@@ -17,11 +17,91 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第三章：关系数据库标准sql语句</title>
+    <link href="https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86sql%E8%AF%AD%E5%8F%A5/"/>
+    <id>https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86sql%E8%AF%AD%E5%8F%A5/</id>
+    <published>2021-12-06T07:45:18.000Z</published>
+    <updated>2021-12-06T07:46:10.111Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;SQL语言的功能概述&quot;&gt;&lt;a href=&quot;#SQL语言的功能概述&quot; class=&quot;headerlink&quot; title=&quot;SQL语言的功能概述&quot;&gt;&lt;/a&gt;SQL语言的功能概述&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;数据定义&quot;&gt;&lt;a href=&quot;#数据定义&quot; class=&quot;headerlink&quot; title=&quot;数据定义&quot;&gt;&lt;/a&gt;数据定义&lt;/h2&gt;&lt;h3 id=&quot;模式的定义与删除&quot;&gt;&lt;a href=&quot;#模式的定义与删除&quot; class=&quot;headerlink&quot; title=&quot;模式的定义与删除&quot;&gt;&lt;/a&gt;模式的定义与删除&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;模式定义&lt;/strong&gt;：在sql中，模式定义语句如下： &lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;create&lt;/span&gt; schema &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;模式名&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;authorization&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;用户名&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ 实际上就相当于定义了一个框架，然后再去这个框架里面进一步创建基本表、视图、定义授权等等。  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模式删除&lt;/strong&gt;：在sql中，模式删除语句如下： &lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;drop&lt;/span&gt; schema &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;模式名&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;cascade&lt;span class=&quot;operator&quot;&gt;|&lt;/span&gt;restrict&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ &lt;em&gt;&lt;strong&gt;注意：选择前者的话，就是说删除模式的同时，也把该模式中所有数据库对象全部删除。选择后者的话，如果该模式中已经定义了下属的数据对象，则就拒绝该操作，该模式没有任何下属的对象才可以删除。&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="复习" scheme="https://little-hqf.github.io/categories/%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+    <category term="sql语言" scheme="https://little-hqf.github.io/tags/sql%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="知识点" scheme="https://little-hqf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第二章：关系数据库</title>
+    <link href="https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+    <published>2021-12-06T07:44:02.000Z</published>
+    <updated>2021-12-06T07:44:45.475Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;第二章：关系数据库&quot;&gt;&lt;a href=&quot;#第二章：关系数据库&quot; class=&quot;headerlink&quot; title=&quot;第二章：关系数据库&quot;&gt;&lt;/a&gt;第二章：关系数据库&lt;/h1&gt;&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;略&lt;/p&gt;
+&lt;h2 id=&quot;关系操作&quot;&gt;&lt;a href=&quot;#关系操作&quot; class=&quot;headerlink&quot; title=&quot;关系操作&quot;&gt;&lt;/a&gt;关系操作&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;通常包括查询操作和修改操作两大部分。其中选择、投影、并、差、笛卡尔积是5种基本操作。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="复习" scheme="https://little-hqf.github.io/categories/%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+    <category term="sql语言" scheme="https://little-hqf.github.io/tags/sql%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="知识点" scheme="https://little-hqf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一章：绪论</title>
+    <link href="https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/"/>
+    <id>https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/</id>
+    <published>2021-12-06T07:39:27.000Z</published>
+    <updated>2021-12-06T07:43:31.581Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;第一章：绪论&quot;&gt;&lt;a href=&quot;#第一章：绪论&quot; class=&quot;headerlink&quot; title=&quot;第一章：绪论&quot;&gt;&lt;/a&gt;第一章：绪论&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;简单弄清楚data、DB、DBMS、DBS之间的关系&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;数据库系统的特点-重点&quot;&gt;&lt;a href=&quot;#数据库系统的特点-重点&quot; class=&quot;headerlink&quot; title=&quot;数据库系统的特点(重点)&quot;&gt;&lt;/a&gt;数据库系统的特点(重点)&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;数据结构化：DBS实现整体数据的结构化，这是主要特征之一。所谓的整体是指数据库中的数据不再仅仅针对某个应用，而是面向整个整体。不仅数据内部是结构化的，而且整体也是结构化，数据之间具有联系。&lt;/li&gt;
+&lt;li&gt;数据的共享性高，冗余度低且易扩充。&lt;/li&gt;
+&lt;li&gt;数据独立性高：物理独立和逻辑独立。物理独立性是指用户的应用程序与数据库中的数据的物理存储是相互独立的。逻辑独立性是指用户的应用程序与数据库的逻辑结构是相互独立的。&lt;/li&gt;
+&lt;li&gt;数据由DBMS统一控制和管理。&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="复习" scheme="https://little-hqf.github.io/categories/%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+    <category term="sql语言" scheme="https://little-hqf.github.io/tags/sql%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="知识点" scheme="https://little-hqf.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
     <title>指针终结者</title>
     <link href="https://little-hqf.github.io/2021/12/05/%E6%8C%87%E9%92%88%E7%BB%88%E7%BB%93%E8%80%85/"/>
     <id>https://little-hqf.github.io/2021/12/05/%E6%8C%87%E9%92%88%E7%BB%88%E7%BB%93%E8%80%85/</id>
     <published>2021-12-05T00:41:30.000Z</published>
-    <updated>2021-12-05T03:09:50.589Z</updated>
+    <updated>2021-12-06T07:41:46.296Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;指针是什么&quot;&gt;&lt;a href=&quot;#指针是什么&quot; class=&quot;headerlink&quot; title=&quot;指针是什么&quot;&gt;&lt;/a&gt;指针是什么&lt;/h1&gt;&lt;blockquote&gt;
@@ -30,33 +110,12 @@
     
     
     
-    <category term="c语言" scheme="https://little-hqf.github.io/categories/c%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程" scheme="https://little-hqf.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="导航" scheme="https://little-hqf.github.io/tags/%E5%AF%BC%E8%88%AA/"/>
+    <category term="c语言" scheme="https://little-hqf.github.io/tags/c%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="分享" scheme="https://little-hqf.github.io/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://little-hqf.github.io/2021/12/04/hello-world/"/>
-    <id>https://little-hqf.github.io/2021/12/04/hello-world/</id>
-    <published>2021-12-04T01:38:30.939Z</published>
-    <updated>2021-12-05T02:54:21.292Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
+    <category term="难点" scheme="https://little-hqf.github.io/tags/%E9%9A%BE%E7%82%B9/"/>
     
   </entry>
   
