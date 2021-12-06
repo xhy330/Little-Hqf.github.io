@@ -6,7 +6,7 @@
   <link href="https://little-hqf.github.io/atom.xml" rel="self"/>
   
   <link href="https://little-hqf.github.io/"/>
-  <updated>2021-12-06T07:46:10.111Z</updated>
+  <updated>2021-12-06T08:11:47.332Z</updated>
   <id>https://little-hqf.github.io/</id>
   
   <author>
@@ -21,15 +21,12 @@
     <link href="https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86sql%E8%AF%AD%E5%8F%A5/"/>
     <id>https://little-hqf.github.io/2021/12/06/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86sql%E8%AF%AD%E5%8F%A5/</id>
     <published>2021-12-06T07:45:18.000Z</published>
-    <updated>2021-12-06T07:46:10.111Z</updated>
+    <updated>2021-12-06T08:11:47.332Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;SQL语言的功能概述&quot;&gt;&lt;a href=&quot;#SQL语言的功能概述&quot; class=&quot;headerlink&quot; title=&quot;SQL语言的功能概述&quot;&gt;&lt;/a&gt;SQL语言的功能概述&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;数据定义&quot;&gt;&lt;a href=&quot;#数据定义&quot; class=&quot;headerlink&quot; title=&quot;数据定义&quot;&gt;&lt;/a&gt;数据定义&lt;/h2&gt;&lt;h3 id=&quot;模式的定义与删除&quot;&gt;&lt;a href=&quot;#模式的定义与删除&quot; class=&quot;headerlink&quot; title=&quot;模式的定义与删除&quot;&gt;&lt;/a&gt;模式的定义与删除&lt;/h3&gt;&lt;ol&gt;
+    <summary type="html">&lt;h1 id=&quot;SQL语言的功能概述&quot;&gt;&lt;a href=&quot;#SQL语言的功能概述&quot; class=&quot;headerlink&quot; title=&quot;SQL语言的功能概述&quot;&gt;&lt;/a&gt;SQL语言的功能概述&lt;/h1&gt;&lt;h2 id=&quot;数据定义&quot;&gt;&lt;a href=&quot;#数据定义&quot; class=&quot;headerlink&quot; title=&quot;数据定义&quot;&gt;&lt;/a&gt;数据定义&lt;/h2&gt;&lt;h3 id=&quot;模式的定义与删除&quot;&gt;&lt;a href=&quot;#模式的定义与删除&quot; class=&quot;headerlink&quot; title=&quot;模式的定义与删除&quot;&gt;&lt;/a&gt;模式的定义与删除&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;模式定义&lt;/strong&gt;：在sql中，模式定义语句如下： &lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;create&lt;/span&gt; schema &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;模式名&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;authorization&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;用户名&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
  实际上就相当于定义了一个框架，然后再去这个框架里面进一步创建基本表、视图、定义授权等等。  &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模式删除&lt;/strong&gt;：在sql中，模式删除语句如下： &lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;drop&lt;/span&gt; schema &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;模式名&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;&amp;lt;&lt;/span&gt;cascade&lt;span class=&quot;operator&quot;&gt;|&lt;/span&gt;restrict&lt;span class=&quot;operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
- &lt;em&gt;&lt;strong&gt;注意：选择前者的话，就是说删除模式的同时，也把该模式中所有数据库对象全部删除。选择后者的话，如果该模式中已经定义了下属的数据对象，则就拒绝该操作，该模式没有任何下属的对象才可以删除。&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;</summary>
     
     
