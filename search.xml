@@ -129,6 +129,38 @@
       </tags>
   </entry>
   <entry>
+    <title>第七章：数据库设计</title>
+    <url>/2021/12/07/%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="数据库设计的基本步骤"><a href="#数据库设计的基本步骤" class="headerlink" title="数据库设计的基本步骤"></a>数据库设计的基本步骤</h1><ol>
+<li>需求分析</li>
+<li>概念结构设计    ER图或者是设计数据字典</li>
+<li>逻辑结构设计    把ER图转为逻辑模型</li>
+<li>物理结构设计    把逻辑模型转为物理模型</li>
+<li>数据库实验      写SQL代码</li>
+<li>数据库运行维护   性能检测<span id="more"></span>
+<h1 id="ER图"><a href="#ER图" class="headerlink" title="ER图"></a>ER图</h1></li>
+<li>实体是长方形</li>
+<li>而属性是椭圆形</li>
+<li>关系为菱形</li>
+<li>1对1(1:1)：1对1关系是指对于实体集与实体集B，A中的每一个实体至多与B中一个实体有关系。</li>
+<li>1对多(1:N)：1对多关系是指实体集A与实体集B中至少有N个实体有关系，并且实体集B中每一个实体至多与实体集A中一个实体有关系。</li>
+<li>多对多(N:M)：多对多关系是指实体集A中的每一个实体与实体集B中至少M个实体有关系，并且实体集B中每一个实体与实体集A中至少N个实体有关系。</li>
+</ol>
+<h1 id="ER图转为关系模式"><a href="#ER图转为关系模式" class="headerlink" title="ER图转为关系模式"></a>ER图转为关系模式</h1><ol>
+<li>1:1要把关系合并到任意一个表中，并且把另外的表里面的主键放到另一个表中。</li>
+<li>1:n要把A(1)的主码放到B(n)里面，然后把关系的属性放到B(n)里面。</li>
+<li>m:n要把两边实体的主键和自身的属性，单独作为一个关系模式。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一章：绪论</title>
     <url>/2021/12/06/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><blockquote>
@@ -327,6 +359,288 @@
 <li>参照完整性：F是R的外码，它与基本关系S的主码$k_{s}$相对应，则R中的每个元组在F上的值必须满足：或者取空值(F的每个属性值均为空值)，或者等于S中某个云组的主码值。</li>
 <li>用户定义的完整性：自己定义就行。</li>
 </ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第六章：关系数据库理论</title>
+    <url>/2021/12/07/%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA/</url>
+    <content><![CDATA[<p><strong>为什么要引入范式？</strong></p>
+<ol>
+<li>数据冗余</li>
+<li>更新异常</li>
+<li>插入异常</li>
+<li>删除异常<span id="more"></span></li>
+</ol>
+<p><strong>范式分类</strong></p>
+<blockquote>
+<p>设计关系数据库的时候，遵从不同的规范要求，这些不同的规范要求被称为不同的范式，各种范式呈递次范式，越高的范式，数据库冗余越小。<br>目关系数据库有六种范式：第一范式(1NF)、第二范式(2NF)、第三范式(3NF)、巴斯-科德范式(BCNF)、第四范式(4NF)和第五范式(5NF，也称为完美范式)。</p>
+</blockquote>
+<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ol>
+<li><p><strong>非平凡函数依赖</strong></p>
+<blockquote>
+<p>x-&gt;y，但y不属于x，则称x-&gt;y是非平凡的函数依赖。<br> 也就是说，你是来蹭课的，上课的时候能看见你，但是其实你不属于上这个课的人。</p>
+</blockquote>
+</li>
+<li><p><strong>平凡函数依赖</strong></p>
+<blockquote>
+<p>x-&gt;y，y属于x，则称x-&gt;y是平凡的函数依赖。<br> 你的班级能够找到你，而且你也是这个班级的。</p>
+</blockquote>
+</li>
+<li><p><strong>完全函数依赖</strong></p>
+<blockquote>
+<p>定义略。如果X集合能够刚好推出Y来，但是X的真子集就不行。也就是说，如果X集合中少任何一个元素的话，都不能推出Y来。</p>
+</blockquote>
+</li>
+<li><p><strong>部分函数依赖</strong></p>
+<blockquote>
+<p>定义略。就像学号能推出姓名，学号和身份证号一起也能推出姓名，如果去掉身份证号也没有影响。</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="候选码"><a href="#候选码" class="headerlink" title="候选码"></a>候选码</h1><blockquote>
+<p>概念：能够推出所有的属性</p>
+</blockquote>
+<h2 id="如何选出候选码？"><a href="#如何选出候选码？" class="headerlink" title="如何选出候选码？"></a>如何选出候选码？</h2><ol>
+<li>只出现在左边的一定是候选码</li>
+<li>只出现在右边的一定不是候选码</li>
+<li>左右都出现的不一定是候选码</li>
+<li>左右都不出现的一定是候选码</li>
+<li>再求确定的候选码的闭包，如果可以推出全部，那么当前确定的就是候选码，否则你要把每一个可能的值放进当前确定的候选码里面求闭包</li>
+</ol>
+<p>例如：R&lt;U, F&gt;, U&lt;A, B, C, D, E, G&gt;是属性集合, F=(AB-&gt;C, CD-&gt;E, E-&gt;A, A-&gt;G)是映射，求候选码：</p>
+<blockquote>
+<p>解：我们可以的知：<br>一定是候选码：B、D<br>一定不是候选码：G<br>不一定是候选码：A、C、E<br>BD啥也推不出来，所以要把每一个不一定都放进去测试<br>(BDA)+ = 可推出：C、E、G   所以可以推出ABCDEG<br>(BDC)+ = 可推出：E、A、G   所以可以推出ABCDEG<br>(BDE)+ = 可推出：A、G、C   所以可以推出ABCDEG<br>综上所述，候选码是{(BDA),(BDC),(BDE)};</p>
+</blockquote>
+<h2 id="一些其他的概念"><a href="#一些其他的概念" class="headerlink" title="一些其他的概念"></a>一些其他的概念</h2><ol>
+<li>超码：能表示出所有属性的集合，比如(BDA), (BDC), (BDE), BDCA, BDEA, ABCDE。候选码是最小的超码。</li>
+<li>主码：从候选码里面任意选出一个作为主码。</li>
+<li>主属性：包含在所有候选码的属性，比如ABCDE</li>
+<li>非主属性：不包含在候选码中的属性，比如G</li>
+<li>全码：所有的属性都是主码</li>
+</ol>
+<h2 id="三大范式"><a href="#三大范式" class="headerlink" title="三大范式"></a>三大范式</h2><ol>
+<li>1NF<blockquote>
+<p>所有字段值都是不可以分解的原子值<br>比如某些系统需要”地址”这个属性，本来讲地址设置为一个数据表的字段就行，但是如果系统经常会访问”地址”属性中”城市”的部分，那么就非要讲”地址”这个属性值重新拆分为省份、城市、详细地址等多个部分进行存储，这样在对地址中某一部分操作的时候会很方便。</p>
+</blockquote>
+</li>
+<li>2NF<blockquote>
+<p>不包含非主属性对码的部分函数依赖，一个表只能保存一种数据，不可以把多种数据保存在同一张数据库表中。</p>
+</blockquote>
+</li>
+<li>3NF<blockquote>
+<p>不包含非主属性对码的传递函数依赖，确保数据表中的每一列数据都和主键直接相关，而不能间接相关。</p>
+</blockquote>
+</li>
+<li>BCNF<blockquote>
+<p>消除每一属性对候选键的传递依赖，BCNF是修正的第三范式。</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="求最小的函数依赖集"><a href="#求最小的函数依赖集" class="headerlink" title="求最小的函数依赖集"></a>求最小的函数依赖集</h1><p> <strong>什么是依赖？</strong></p>
+<blockquote>
+<p>依赖是指关系中一个或一组属性的值可以决定其他属性的值，比如A-&gt;B就是一个依赖。</p>
+</blockquote>
+<p> <strong>如何求最小依赖？</strong></p>
+<ol>
+<li>拆右边为多个元素，比如A-&gt;BC拆为A-&gt;B和A-&gt;C</li>
+<li>除去当前元素，求它的闭包，把集合里面的元素全部都用完。看看能不能推出当前元素的右端值，可以就不要，不可以就保留。</li>
+<li>左边最小化(通过遮住元素看看能不能推出其他的元素)，比如BCD，遮住B，看CD能不能推出B来，如果不能则B就保留，否则就去掉。C和D同理。</li>
+</ol>
+<p><strong>例题</strong>：已知关系R&lt;U, F&gt;, U{A,B,C,D,E,F,G}, F={BCD-&gt;A, BC-&gt;E, A-&gt;F, F-&gt;G, C-&gt;D, A-&gt;G}求F的最小依赖                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </p>
+<blockquote>
+<p><strong>解</strong>：右边没有可以拆分的。<br>    除去BCD这个元素，(BCD)+ =BCDE，发现没有其他元素可以推出A来，保留。<br>    除去BC这个元素，(BC)+ = BCD，其他元素推不出E，保留。<br>    除去A这个元素，(A)+ = AG，其他元素推不出F，保留。<br>    除去F这个元素，(F)+ = F，其他元素推不出G，保留。<br>    除去C这个元素，(C)+ = D，其他元素推不出D来，保留。<br>    除去A这个元素，(A)+ = FG，可以推出G来，去掉。<br>    然后再把左边多的元素看看能不能拆开，BCD，遮住B，CD并不能推出B，同理，不能推出C，但是D可以被推出，所以BCD变成BD。<br>    综上所述：最小依赖为{BC-&gt;A, BC-&gt;E, A-&gt;F, F-&gt;G, C-&gt;D}</p>
+</blockquote>
+<h2 id="模式分解"><a href="#模式分解" class="headerlink" title="模式分解"></a>模式分解</h2><ol>
+<li>准则：无损连接和保持函数依赖。</li>
+<li>无损：就是分解后再次连接，和分解之前一样。</li>
+<li>依赖：依赖不变。</li>
+</ol>
+<p><strong>例题</strong>：一直R{ABCDEGH}, F={A-&gt;D,E-&gt;D,D-&gt;B,BC-&gt;D,DC-&gt;A}，求保持函数依赖的3NF的分解。</p>
+<ol>
+<li>求出最小函数依赖集</li>
+<li>把不在F里面的属性都找出来，单独分成一类</li>
+<li>把每一个依赖左边相同的分为一类，没有一样的，那就把A-&gt;D改成{AD}，如果一样{A-&gt;B, A-&gt;C} 那么就改为{ABC}</li>
+<li>如果候选码没出现在分离(最小依赖集)里面，把任意一个候选码作为一类。<blockquote>
+<p><strong>解</strong>：最小函数依赖集为：Fmin={A-&gt;D,E-&gt;D,D-&gt;B,BC-&gt;D,DC-&gt;A}。<br>GH不在里面，所以单独分为一类{GH}<br>候选码：CE<br>{AD}{ED}{DB}{BCD}{DCA}{CE}{GH}</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第五章：数据库完整性</title>
+    <url>/2021/12/07/%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="数据完整性概述"><a href="#数据完整性概述" class="headerlink" title="数据完整性概述"></a>数据完整性概述</h1><h2 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h2><blockquote>
+<p>符合现实世界的描述</p>
+</blockquote>
+<h2 id="相容性"><a href="#相容性" class="headerlink" title="相容性"></a>相容性</h2><blockquote>
+<p>同一对象在不同表里面是符合逻辑的。比如我的地址、年龄，在两个表里面应该是一样的</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="维护完整性"><a href="#维护完整性" class="headerlink" title="维护完整性"></a>维护完整性</h2><ol>
+<li>提供定义完整性约束条件的机制</li>
+<li>提供完整性检查的方法</li>
+<li>进行违约处理</li>
+</ol>
+<h1 id="三大完整性"><a href="#三大完整性" class="headerlink" title="三大完整性"></a>三大完整性</h1><h2 id="实体完整性"><a href="#实体完整性" class="headerlink" title="实体完整性"></a>实体完整性</h2><blockquote>
+<p>主码唯一，且非空</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    <span class="keyword">primary</span> key(id));</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">primary</span> key, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="参照完整性"><a href="#参照完整性" class="headerlink" title="参照完整性"></a>参照完整性</h2><blockquote>
+<p>外码要么有，要么只有一个</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span>, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    title <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    teacher_id <span class="type">int</span>, </span><br><span class="line">    <span class="keyword">primary</span> key(id), </span><br><span class="line">    <span class="keyword">foreign</span> key(id) <span class="keyword">references</span> course_description(course_id));</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户定义完整性"><a href="#用户定义完整性" class="headerlink" title="用户定义完整性"></a>用户定义完整性</h2><ol>
+<li>非空<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure></li>
+<li>列值唯一<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">unique</span>);</span><br></pre></td></tr></table></figure></li>
+<li>满足某个条件表达式 check来写<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     sex <span class="type">char</span>(<span class="number">2</span>) <span class="keyword">check</span>(sex <span class="keyword">in</span> (<span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;女&#x27;</span>)),</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1><blockquote>
+<p>断言创建以后，任何对断言中涉及关系的操作都会触发关系数据库系统对断言的检查，任何使断言不为真值的操作都会被拒绝执行。</p>
+</blockquote>
+<p>其sql语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> assertion <span class="operator">&lt;</span>断言名<span class="operator">&gt;</span> <span class="operator">&lt;</span><span class="keyword">check</span> 子句<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+<p>例如：限制每一门课程最多有60名学生选修</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> assertion asse_sc_cnum1</span><br><span class="line"><span class="keyword">check</span>(<span class="number">60</span> <span class="operator">&gt;=</span> <span class="keyword">all</span>(<span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)</span><br><span class="line">                <span class="keyword">from</span> sc</span><br><span class="line">                <span class="keyword">group</span> <span class="keyword">by</span> cno)</span><br><span class="line">                );</span><br></pre></td></tr></table></figure>
+<p>删除断言名称：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> assertion <span class="operator">&lt;</span>断言名<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h1><blockquote>
+<p>触发器也叫做：事件-&gt;条件-&gt;动作 规则。也就是说事件在某个条件满足的时，会触发某个规则。是一段程序，可以在特定的时刻被自动触发执行。</p>
+</blockquote>
+<p>其sql语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> <span class="operator">&lt;</span>触发器名<span class="operator">&gt;</span>   <span class="comment">/*每当触发事件发生时，该触发器被激活*/</span></span><br><span class="line">&#123;before<span class="operator">|</span>after&#125; <span class="operator">&lt;</span>触发事件<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="operator">&lt;</span>表面<span class="operator">&gt;</span>   <span class="comment">/*指明触发器激活的时间是在执行触发事件前或后*/</span></span><br><span class="line"><span class="keyword">referencing</span> <span class="keyword">new</span><span class="operator">|</span><span class="keyword">old</span> <span class="type">row</span> <span class="keyword">as</span> <span class="operator">&lt;</span>变量<span class="operator">&gt;</span>   <span class="comment">/*referencing指出引用的变量*/</span></span><br><span class="line"><span class="keyword">for</span> <span class="keyword">each</span>&#123;<span class="type">row</span><span class="operator">|</span>statement&#125;     <span class="comment">/*定义触发器的类型，指明动作体执行的频率*/</span></span><br><span class="line">[<span class="keyword">when</span> <span class="operator">&lt;</span>触发条件<span class="operator">&gt;</span>] <span class="operator">&lt;</span>触发动作体<span class="operator">&gt;</span>   <span class="comment">/*仅当触发条件为真时才执行触发动作体*/</span> </span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第四章：数据库安全性概述</title>
+    <url>/2021/12/07/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="数据库安全性概述"><a href="#数据库安全性概述" class="headerlink" title="数据库安全性概述"></a>数据库安全性概述</h1><blockquote>
+<p>是指保护数据库以防止不合法使用所造成的数据泄露、更改或者破坏。</p>
+</blockquote>
+<h2 id="不安全因素"><a href="#不安全因素" class="headerlink" title="不安全因素"></a>不安全因素</h2><ol>
+<li>非授权用户对数据库的恶意存取和破坏</li>
+<li>数据库中重要或敏感的数据被泄露</li>
+<li>安全环境的脆弱性<span id="more"></span>
+<h2 id="自主存取控制方法"><a href="#自主存取控制方法" class="headerlink" title="自主存取控制方法"></a>自主存取控制方法</h2><blockquote>
+<p>主要是通过对用户进行授予或收回对数据的操作权限。</p>
+</blockquote>
+</li>
+<li>grant、revoke<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">to</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span>；</span><br><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">from</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span>；</span><br></pre></td></tr></table></figure></li>
+<li>创建用户<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span><span class="operator">&lt;</span>username<span class="operator">&gt;</span> <span class="keyword">with</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="安全性控制"><a href="#安全性控制" class="headerlink" title="安全性控制"></a>安全性控制</h1><ol>
+<li>用户身份识别：<ol>
+<li>静态口令识别</li>
+<li>动态口令识别</li>
+<li>生物特征识别</li>
+<li>智能卡识别</li>
+</ol>
+</li>
+<li>存储控制</li>
+<li><strong>自主存取控制方法</strong>：<blockquote>
+<p>字面意思就是我们用户可以定义和分配其他用户的操作权限。主要通过grant、revoke来惊喜控制。由两个元素构成：数据对象和操作权限。我们定义用户的存取权限称为授权。</p>
+</blockquote>
+ 主要存取方式<table>
+<thead>
+<tr>
+<th>对象类型</th>
+<th>对象</th>
+<th>操作类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据库模式</td>
+<td>模式</td>
+<td>create schema</td>
+</tr>
+<tr>
+<td>数据库模式</td>
+<td>基本表</td>
+<td>create table、alter table</td>
+</tr>
+<tr>
+<td>数据库模式</td>
+<td>视图</td>
+<td>create view</td>
+</tr>
+<tr>
+<td>数据库模式</td>
+<td>索引</td>
+<td>create index</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>基本表和视图</td>
+<td>select、insert、update、delete、references、all privileges</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>属性列</td>
+<td>select、insert、update、references、all privileges</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>references权限代表是否允许创建外键、all privileges代表所有权限。</strong></em></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li>授权 grant<blockquote>
+<p>授权命令是由数据库管理员使用的，若给用户分配权限时使用with grant option语句，则普通用户获权后，可以把自己的权限授予其他人。</p>
+</blockquote>
+其基本语法如下：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>[(属性名)] [,<span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="operator">&gt;</span>]...</span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">grant</span> option];</span><br></pre></td></tr></table></figure></li>
+<li>回收权利<br>其基本语法如下：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>[(属性名)] [,<span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="operator">&gt;</span>]...[cascade<span class="operator">|</span>restrict];</span><br></pre></td></tr></table></figure></li>
+<li>数据库角色<blockquote>
+<p>角色就是一类人，比如CEO、总监、普通员工等等，可以给这一类人授权。</p>
+</blockquote>
+<ol>
+<li>角色的创建<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> role <span class="operator">&lt;</span>角色名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>给角色授权<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span><span class="operator">&lt;</span>对象名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>角色<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="operator">&gt;</span>]...</span><br></pre></td></tr></table></figure></li>
+<li>将一个角色授予其他的角色或用户<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>角色<span class="number">1</span><span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="number">2</span><span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>角色<span class="number">3</span><span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="number">1</span><span class="operator">&gt;</span>]...</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+<em><strong>角色3获得的是角色1与角色2权限的总和。</strong></em></li>
+<li>角色权限的回收<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span><span class="operator">&lt;</span>对象名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>角色<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="operator">&gt;</span>]...</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+<h1 id="视图机制"><a href="#视图机制" class="headerlink" title="视图机制"></a>视图机制</h1><blockquote>
+<p>就是为不同用户定义不同的视图，把不需要的数据隐藏起来，这样的话用户就不会瞎操作了。</p>
+</blockquote>
+<h1 id="审计"><a href="#审计" class="headerlink" title="审计"></a>审计</h1><blockquote>
+<p>把对数据库的所有操作都记录到审计日志中，然后可以通过日志审查这个里面是否有一些违法的行为</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 对修改sc表结构或修改sc表数据的操作进行审计</span></span><br><span class="line"><span class="comment">audit alter, update on sc;</span></span><br><span class="line"><span class="comment">/* 取消对sc表的审计</span></span><br><span class="line"><span class="comment">noaudit alter, update on sc;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
 ]]></content>
       <categories>
         <category>复习</category>
