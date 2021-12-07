@@ -129,38 +129,6 @@
       </tags>
   </entry>
   <entry>
-    <title>第七章：数据库设计</title>
-    <url>/2021/12/07/%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h1 id="数据库设计的基本步骤"><a href="#数据库设计的基本步骤" class="headerlink" title="数据库设计的基本步骤"></a>数据库设计的基本步骤</h1><ol>
-<li>需求分析</li>
-<li>概念结构设计    ER图或者是设计数据字典</li>
-<li>逻辑结构设计    把ER图转为逻辑模型</li>
-<li>物理结构设计    把逻辑模型转为物理模型</li>
-<li>数据库实验      写SQL代码</li>
-<li>数据库运行维护   性能检测<span id="more"></span>
-<h1 id="ER图"><a href="#ER图" class="headerlink" title="ER图"></a>ER图</h1></li>
-<li>实体是长方形</li>
-<li>而属性是椭圆形</li>
-<li>关系为菱形</li>
-<li>1对1(1:1)：1对1关系是指对于实体集与实体集B，A中的每一个实体至多与B中一个实体有关系。</li>
-<li>1对多(1:N)：1对多关系是指实体集A与实体集B中至少有N个实体有关系，并且实体集B中每一个实体至多与实体集A中一个实体有关系。</li>
-<li>多对多(N:M)：多对多关系是指实体集A中的每一个实体与实体集B中至少M个实体有关系，并且实体集B中每一个实体与实体集A中至少N个实体有关系。</li>
-</ol>
-<h1 id="ER图转为关系模式"><a href="#ER图转为关系模式" class="headerlink" title="ER图转为关系模式"></a>ER图转为关系模式</h1><ol>
-<li>1:1要把关系合并到任意一个表中，并且把另外的表里面的主键放到另一个表中。</li>
-<li>1:n要把A(1)的主码放到B(n)里面，然后把关系的属性放到B(n)里面。</li>
-<li>m:n要把两边实体的主键和自身的属性，单独作为一个关系模式。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第一章：绪论</title>
     <url>/2021/12/06/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><blockquote>
@@ -224,6 +192,64 @@
 <li>模式：也称为逻辑模式，是全体数据的逻辑结构和特征的描述。</li>
 <li>外模式：也称为子模式，或者用户模式，它是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述。</li>
 <li>内模式：存储模式，一个数据库只有一个内模式，它是数据物理结构和存储方式的描述，是数据在数据库内部的组织方式。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第七章：数据库设计</title>
+    <url>/2021/12/07/%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="数据库设计的基本步骤"><a href="#数据库设计的基本步骤" class="headerlink" title="数据库设计的基本步骤"></a>数据库设计的基本步骤</h1><ol>
+<li>需求分析</li>
+<li>概念结构设计    ER图或者是设计数据字典</li>
+<li>逻辑结构设计    把ER图转为逻辑模型</li>
+<li>物理结构设计    把逻辑模型转为物理模型</li>
+<li>数据库实验      写SQL代码</li>
+<li>数据库运行维护   性能检测<span id="more"></span>
+<h1 id="ER图"><a href="#ER图" class="headerlink" title="ER图"></a>ER图</h1></li>
+<li>实体是长方形</li>
+<li>而属性是椭圆形</li>
+<li>关系为菱形</li>
+<li>1对1(1:1)：1对1关系是指对于实体集与实体集B，A中的每一个实体至多与B中一个实体有关系。</li>
+<li>1对多(1:N)：1对多关系是指实体集A与实体集B中至少有N个实体有关系，并且实体集B中每一个实体至多与实体集A中一个实体有关系。</li>
+<li>多对多(N:M)：多对多关系是指实体集A中的每一个实体与实体集B中至少M个实体有关系，并且实体集B中每一个实体与实体集A中至少N个实体有关系。</li>
+</ol>
+<h1 id="ER图转为关系模式"><a href="#ER图转为关系模式" class="headerlink" title="ER图转为关系模式"></a>ER图转为关系模式</h1><ol>
+<li>1:1要把关系合并到任意一个表中，并且把另外的表里面的主键放到另一个表中。</li>
+<li>1:n要把A(1)的主码放到B(n)里面，然后把关系的属性放到B(n)里面。</li>
+<li>m:n要把两边实体的主键和自身的属性，单独作为一个关系模式。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二章：关系数据库</title>
+    <url>/2021/12/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="第二章：关系数据库"><a href="#第二章：关系数据库" class="headerlink" title="第二章：关系数据库"></a>第二章：关系数据库</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>略</p>
+<h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><blockquote>
+<p>通常包括查询操作和修改操作两大部分。其中选择、投影、并、差、笛卡尔积是5种基本操作。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="关系的完整性"><a href="#关系的完整性" class="headerlink" title="关系的完整性"></a>关系的完整性</h2><blockquote>
+<p>关系模式中有三类完整性约束：实体完整性、参照完整性和用户定义的完整性。</p>
+</blockquote>
+<ol>
+<li>实体完整性：若属性A是基本关系R的主属性，则A不能取空值。</li>
+<li>参照完整性：F是R的外码，它与基本关系S的主码$k_{s}$相对应，则R中的每个元组在F上的值必须满足：或者取空值(F的每个属性值均为空值)，或者等于S中某个云组的主码值。</li>
+<li>用户定义的完整性：自己定义就行。</li>
 </ol>
 ]]></content>
       <categories>
@@ -333,32 +359,6 @@
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span><span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span>)...]</span><br><span class="line"><span class="keyword">as</span> <span class="operator">&lt;</span>子查询<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">check</span> option];</span><br></pre></td></tr></table></figure>
 <p>子查询可以是任意的select语句，是否可以含有order by子句和distinct短语由具体系统的实现。<br><em><strong>只是把视图的定义存入数据字典，并不执行其中的select语句</strong></em>。</p>
 <p>行列子集视图：去掉了基本表其他的某些行和某些列，只保留了主码。<br>分组视图：带有聚集函数和group by子句的查询来定义视图。<br><em><strong>并不是所有视图都是可更新的</strong></em></p>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二章：关系数据库</title>
-    <url>/2021/12/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="第二章：关系数据库"><a href="#第二章：关系数据库" class="headerlink" title="第二章：关系数据库"></a>第二章：关系数据库</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>略</p>
-<h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><blockquote>
-<p>通常包括查询操作和修改操作两大部分。其中选择、投影、并、差、笛卡尔积是5种基本操作。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="关系的完整性"><a href="#关系的完整性" class="headerlink" title="关系的完整性"></a>关系的完整性</h2><blockquote>
-<p>关系模式中有三类完整性约束：实体完整性、参照完整性和用户定义的完整性。</p>
-</blockquote>
-<ol>
-<li>实体完整性：若属性A是基本关系R的主属性，则A不能取空值。</li>
-<li>参照完整性：F是R的外码，它与基本关系S的主码$k_{s}$相对应，则R中的每个元组在F上的值必须满足：或者取空值(F的每个属性值均为空值)，或者等于S中某个云组的主码值。</li>
-<li>用户定义的完整性：自己定义就行。</li>
-</ol>
 ]]></content>
       <categories>
         <category>复习</category>
