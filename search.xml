@@ -129,702 +129,8 @@
       </tags>
   </entry>
   <entry>
-    <title>第一章：基础导论</title>
-    <url>/2021/12/24/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E5%AF%BC%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><h3 id="1-1-数据"><a href="#1-1-数据" class="headerlink" title="1.1 数据"></a>1.1 数据</h3><p><strong>数据</strong>是客观事物的符号表示，是所有能输入到计算机并且被计算机程序所处理的符号的总称。</p>
-<h3 id="1-2-数据项"><a href="#1-2-数据项" class="headerlink" title="1.2 数据项"></a>1.2 数据项</h3><p>数据项是组成数据元素有<strong>独立含义的、不可分割的最小单位。</strong></p>
-<h3 id="1-3-数据元素"><a href="#1-3-数据元素" class="headerlink" title="1.3 数据元素"></a>1.3 数据元素</h3><p>数据元素是数据的<strong>基本单位</strong>，在计算机中通常作为一个整体考虑。</p>
-<h3 id="1-4-数据对象"><a href="#1-4-数据对象" class="headerlink" title="1.4 数据对象"></a>1.4 数据对象</h3><p>数据对象是<strong>性质相同的数据元素的集合</strong>，是数据的一个子集。</p>
-<span id="more"></span>
-
-
-
-<h2 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2. 数据结构"></a>2. 数据结构</h2><p>数据结构是相互之间存在一种或者多种特定关系的数据元素的集合，也就是说数据是带“结构”的数据元素的集合，“结构”则指数据元素之间的关系。</p>
-<h3 id="2-1-逻辑结构"><a href="#2-1-逻辑结构" class="headerlink" title="2.1 逻辑结构"></a>2.1 逻辑结构</h3><ul>
-<li>基本概念：数据的逻辑结构是从逻辑关系上描述数据的，它与数据的存储位置无关，是独立于计算机的。</li>
-<li>两个元素：一个是<strong>数据元素</strong>和<strong>关系。</strong></li>
-</ul>
-<h4 id="2-1-1-线性结构"><a href="#2-1-1-线性结构" class="headerlink" title="2.1.1 线性结构"></a>2.1.1 线性结构</h4><p>也就是数据元素之前存在<strong>一对一</strong>的关系。</p>
-<h4 id="2-1-2-非线性结构"><a href="#2-1-2-非线性结构" class="headerlink" title="2.1.2 非线性结构"></a>2.1.2 非线性结构</h4><ol>
-<li>集合结构：数据元素之间除了<strong>属于同一集合</strong>的关系外，没有其他关系了。</li>
-<li>树结构：数据元素之间存在<strong>一对多</strong>的关系。</li>
-<li>图结构：数据元素之间存在<strong>多对多</strong>的关系。</li>
-</ol>
-<h3 id="2-2-存储结构"><a href="#2-2-存储结构" class="headerlink" title="2.2 存储结构"></a>2.2 存储结构</h3><h4 id="2-2-1-顺序存储结构"><a href="#2-2-1-顺序存储结构" class="headerlink" title="2.2.1 顺序存储结构"></a>2.2.1 顺序存储结构</h4><p>顺序存储结构是借助元素在存储器中的<strong>相对位置</strong>来表示数据元素之间的逻辑关系，通常借助数据语言中的<strong>数组</strong>类型来描述。</p>
-<h4 id="2-2-2-链式存储结构"><a href="#2-2-2-链式存储结构" class="headerlink" title="2.2.2 链式存储结构"></a>2.2.2 链式存储结构</h4><p>跟顺序存储结构相比，它在存储器中的存储发生了改变，不再连续了。为了表示结点之间的关系，还要给每个节点附加指针字段，用于存放后继元素的地址。</p>
-<h2 id="3-算法与算法分析"><a href="#3-算法与算法分析" class="headerlink" title="3. 算法与算法分析"></a>3. 算法与算法分析</h2>]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一章：绪论</title>
-    <url>/2021/12/06/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><blockquote>
-<p>简单弄清楚data、DB、DBMS、DBS之间的关系</p>
-</blockquote>
-<h2 id="数据库系统的特点-重点"><a href="#数据库系统的特点-重点" class="headerlink" title="数据库系统的特点(重点)"></a>数据库系统的特点(重点)</h2><ol>
-<li>数据结构化：DBS实现整体数据的结构化，这是主要特征之一。所谓的整体是指数据库中的数据不再仅仅针对某个应用，而是面向整个整体。不仅数据内部是结构化的，而且整体也是结构化，数据之间具有联系。</li>
-<li>数据的共享性高，冗余度低且易扩充。</li>
-<li>数据独立性高：物理独立和逻辑独立。物理独立性是指用户的应用程序与数据库中的数据的物理存储是相互独立的。逻辑独立性是指用户的应用程序与数据库的逻辑结构是相互独立的。</li>
-<li>数据由DBMS统一控制和管理。</li>
-</ol>
-<span id="more"></span>
-
-<h1 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h1><h2 id="两类数据模型"><a href="#两类数据模型" class="headerlink" title="两类数据模型"></a>两类数据模型</h2><ol>
-<li>概念模型：就是对现实的抽象，也叫做信息模型。</li>
-<li>逻辑模型：主要分为层次模型、网状模型、关系模型等，主要是抽象出来给计算机系统建模使用。</li>
-<li>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方式和存取方法。</li>
-</ol>
-<h2 id="概念模型"><a href="#概念模型" class="headerlink" title="概念模型"></a>概念模型</h2><h3 id="信息世界中的基本概念"><a href="#信息世界中的基本概念" class="headerlink" title="信息世界中的基本概念"></a>信息世界中的基本概念</h3><ol>
-<li>实体：客观存在并可相互区别的事物称为实体。</li>
-<li>属性：实体所具有的某一特性称为属性。</li>
-<li><strong>码：唯一标识实体的属性集称为码(重点)。</strong></li>
-<li>实体型：</li>
-<li>实体集：</li>
-<li>联系：联系有好多种。</li>
-</ol>
-<h2 id="数据模型的组成元素-重点"><a href="#数据模型的组成元素-重点" class="headerlink" title="数据模型的组成元素(重点)"></a>数据模型的组成元素(重点)</h2><blockquote>
-<p>数据模型通常由数据结构、数据操作和数据的完整性约束三部分组成。</p>
-</blockquote>
-<ol>
-<li>数据结构：描述数据库组成的对象以及对象之间的联系。</li>
-<li>数据操作：分为查询和更新两大类。</li>
-<li>数据的完整性约束条件：就是一组完整性规则，保证数据的正确、有效和相容。</li>
-</ol>
-<h2 id="常用的数据模型"><a href="#常用的数据模型" class="headerlink" title="常用的数据模型"></a>常用的数据模型</h2><blockquote>
-<p>这里讲的数据模型都是逻辑上的，也就是用户眼中看见的。</p>
-</blockquote>
-<h3 id="层次模型"><a href="#层次模型" class="headerlink" title="层次模型"></a>层次模型</h3><ol>
-<li>有且只有一个结点没有双亲结点，这个结点称为根结点。</li>
-<li>根以外的结点有且只有一个双亲结点。</li>
-</ol>
-<h3 id="网状模型"><a href="#网状模型" class="headerlink" title="网状模型"></a>网状模型</h3><ol>
-<li>允许一个以上的结点无双亲。</li>
-<li>一个结点可以有多于一个的双亲。</li>
-</ol>
-<h3 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h3><blockquote>
-<p>每个关系的数据结构是一张规范化的二维表。</p>
-</blockquote>
-<ol>
-<li>关系：一个关系对应通常来说就是一张表。</li>
-<li>元组：表中的一行就是一个元组。</li>
-<li>属性：表中的一列就是一个属性。</li>
-<li>码：表中的某个属性组，可以用来唯一确定一个元组。</li>
-<li>域：一组具有相同数据类型的值的集合。</li>
-<li>分量：元组中的一个属性值。</li>
-</ol>
-<h2 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h2><blockquote>
-<p>模式是相对稳定的，而实例是相对变动的。因为数据库中的数据是在不断更新的。模式反映的是数据的结构以及其联系，二实例反映的是数据库某一时刻的状态。</p>
-</blockquote>
-<h3 id="数据库系统的三级模式结构-重点"><a href="#数据库系统的三级模式结构-重点" class="headerlink" title="数据库系统的三级模式结构(重点)"></a>数据库系统的三级模式结构(重点)</h3><ol>
-<li>模式：也称为逻辑模式，是全体数据的逻辑结构和特征的描述。</li>
-<li>外模式：也称为子模式，或者用户模式，它是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述。</li>
-<li>内模式：存储模式，一个数据库只有一个内模式，它是数据物理结构和存储方式的描述，是数据在数据库内部的组织方式。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第七章：数据库设计</title>
-    <url>/2021/12/07/%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h1 id="数据库设计的基本步骤"><a href="#数据库设计的基本步骤" class="headerlink" title="数据库设计的基本步骤"></a>数据库设计的基本步骤</h1><ol>
-<li>需求分析</li>
-<li>概念结构设计    ER图或者是设计数据字典</li>
-<li>逻辑结构设计    把ER图转为逻辑模型</li>
-<li>物理结构设计    把逻辑模型转为物理模型</li>
-<li>数据库实验      写SQL代码</li>
-<li>数据库运行维护   性能检测<span id="more"></span>
-<h1 id="ER图"><a href="#ER图" class="headerlink" title="ER图"></a>ER图</h1></li>
-<li>实体是长方形</li>
-<li>而属性是椭圆形</li>
-<li>关系为菱形</li>
-<li>1对1(1:1)：1对1关系是指对于实体集与实体集B，A中的每一个实体至多与B中一个实体有关系。</li>
-<li>1对多(1:N)：1对多关系是指实体集A与实体集B中至少有N个实体有关系，并且实体集B中每一个实体至多与实体集A中一个实体有关系。</li>
-<li>多对多(N:M)：多对多关系是指实体集A中的每一个实体与实体集B中至少M个实体有关系，并且实体集B中每一个实体与实体集A中至少N个实体有关系。</li>
-</ol>
-<h1 id="ER图转为关系模式"><a href="#ER图转为关系模式" class="headerlink" title="ER图转为关系模式"></a>ER图转为关系模式</h1><ol>
-<li>1:1要把关系合并到任意一个表中，并且把另外的表里面的主键放到另一个表中。</li>
-<li>1:n要把A(1)的主码放到B(n)里面，然后把关系的属性放到B(n)里面。</li>
-<li>m:n要把两边实体的主键和自身的属性，单独作为一个关系模式。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第三章：关系数据库标准sql语句</title>
-    <url>/2021/12/06/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86sql%E8%AF%AD%E5%8F%A5/</url>
-    <content><![CDATA[<h1 id="SQL语言的功能概述"><a href="#SQL语言的功能概述" class="headerlink" title="SQL语言的功能概述"></a>SQL语言的功能概述</h1><h2 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h2><h3 id="模式的定义与删除"><a href="#模式的定义与删除" class="headerlink" title="模式的定义与删除"></a>模式的定义与删除</h3><ol>
-<li><strong>模式定义</strong>：在sql中，模式定义语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> schema <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="keyword">authorization</span> <span class="operator">&lt;</span>用户名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
- 实际上就相当于定义了一个框架，然后再去这个框架里面进一步创建基本表、视图、定义授权等等。  </li>
-</ol>
- <span id="more"></span>
-<ol start="2">
-<li><strong>模式删除</strong>：在sql中，模式删除语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> schema <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="operator">&lt;</span>cascade<span class="operator">|</span>restrict<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
- <em><strong>注意：选择前者的话，就是说删除模式的同时，也把该模式中所有数据库对象全部删除。选择后者的话，如果该模式中已经定义了下属的数据对象，则就拒绝该操作，该模式没有任何下属的对象才可以删除。</strong></em></li>
-</ol>
-<h3 id="基本表的定义、删除、与修改"><a href="#基本表的定义、删除、与修改" class="headerlink" title="基本表的定义、删除、与修改"></a>基本表的定义、删除、与修改</h3><ol>
-<li><strong>表的定义</strong>：在sql中，表的定义语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>[具体要求]</span><br></pre></td></tr></table></figure></li>
-<li><strong>表的删除</strong>：在sql中，表的删除语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> [cascade<span class="operator">|</span>restrict]</span><br></pre></td></tr></table></figure></li>
-<li><strong>表的修改</strong>：在sql中，表中的修改语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>[具体要求]</span><br></pre></td></tr></table></figure>
- <em><strong>注意：这些操作都是对表的属性什么的来操作，比如增加属性呀什么的，跟update处理数据要区分开。</strong></em></li>
-</ol>
-<h3 id="索引的建立与删除"><a href="#索引的建立与删除" class="headerlink" title="索引的建立与删除"></a>索引的建立与删除</h3><blockquote>
-<p>当表的数据量比较大的时候，查询会比较耗时，索引建立索引来帮助快速查询数据。</p>
-</blockquote>
-<hr>
-<h2 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h2><p>在sql中，数据查询的语句为：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">&lt;</span>目标或者表达式<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>表名或者视图名<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span> <span class="operator">&lt;</span>条件表达式或者子查询<span class="operator">&gt;</span>]</span><br><span class="line">[<span class="keyword">group</span> <span class="keyword">by</span> <span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;</span> [<span class="keyword">having</span> <span class="operator">&lt;</span>条件表达式<span class="operator">&gt;</span>]]</span><br><span class="line">[<span class="keyword">order</span> <span class="keyword">by</span> <span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;</span> [<span class="keyword">ASC</span><span class="operator">|</span><span class="keyword">DESC</span>]];</span><br></pre></td></tr></table></figure>
-<p><em><strong>注意：having与where作用的对象不同，having操作的对象是组，而where操作的对象是每一个元组。order by只能对最终结果排序。</strong></em></p>
-<h3 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h3><ol>
-<li><p>消除取值重复的行，这个需要用到distinct关键字，会把重复的元素给删除掉。这种情况一般用于查询学生人数什么的，跟多个属性挂钩的情况。如下例，查询选修了课程的学生的学号：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> sno</span><br><span class="line"><span class="keyword">from</span> sc;</span><br></pre></td></tr></table></figure></li>
-<li><p>查询满足条件的元组，通常使用where和比较运算符。</p>
-</li>
-<li><p>确定数据的范围，这个是使用的是between关键字，如下例，查询年龄在20-23岁(包括20和23)之间学生的姓名、系别、年龄：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> snake, sdept, sage</span><br><span class="line"><span class="keyword">from</span> student</span><br><span class="line"><span class="keyword">where</span> sage <span class="keyword">between</span> <span class="number">20</span> <span class="keyword">and</span> <span class="number">23</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>确定集合，这个是使用谓词IN，可以用来查找属性值属于制定集合的元组。</p>
-</li>
-<li><p>字符匹配，用的关键字是like，%是匹配任意长度的字符串，_是匹配任意单个字符。</p>
-</li>
-<li><p>对最后的结果进行排序，用的是order by语句，可以接一个或者多个属性列。asc是降序、desc是升序。</p>
-</li>
-<li><p>聚集函数，只需要注意，<strong>where子句是不能够用聚集函数作为条件表达式的。聚集函数只能用于select子句和group by中的having字句。</strong></p>
-</li>
-<li><p>group by子句，是讲查询结构按某一列或者多列的值分组，值相等的分为一组。分组后聚集函数讲作用于每一个组，即每一个组都有一个函数值，</p>
-</li>
-<li><p>相关子查询：如果子查询的条件依赖于父查询，这类子查询称为相关子查询。不相关子查询：子查询条件是不依赖于父查询的。</p>
-</li>
-<li><p>any和all</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>=</th>
-<th>!=</th>
-<th>&lt;</th>
-<th>&lt;=</th>
-<th>&gt;</th>
-<th>&gt;=</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>any</td>
-<td>in</td>
-<td>–</td>
-<td>&lt;max</td>
-<td>&lt;=max</td>
-<td>&gt;min</td>
-<td>&gt;=min</td>
-</tr>
-<tr>
-<td>all</td>
-<td>–</td>
-<td>not in</td>
-<td>&lt;min</td>
-<td>&lt;=min</td>
-<td>&gt;max</td>
-<td>&gt;=max</td>
-</tr>
-</tbody></table>
-</li>
-</ol>
-<h2 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h2><blockquote>
-<p>数据更细的操作有三种：向表中添加若干行数据、修改表中的数据和删除表中的若干行数据。</p>
-</blockquote>
-<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><ol>
-<li>插入一个元组，基本语法：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span></span><br><span class="line"><span class="keyword">into</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>[列名]</span><br><span class="line"><span class="keyword">values</span>(<span class="operator">&lt;</span>常量<span class="operator">&gt;</span>、...)</span><br></pre></td></tr></table></figure>
-没什么具体要求，就是要注意字符串是单引号就行。</li>
-<li>插入子查询(批量元素的插入)，类似于上述表达式，先执行子查询，然后把子查询的结果再插入到表中。</li>
-</ol>
-<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><p>语句的一般格式为：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">set</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;=</span><span class="operator">&lt;</span>表达式<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span><span class="operator">&lt;</span>条件<span class="operator">&gt;</span>];</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>删除语句的一般格式为：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span>]</span><br></pre></td></tr></table></figure>
-<p>delete跟那个alter不一样，这个是删除的数据，而不是表的定义，注意区分开。</p>
-<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><blockquote>
-<p>视图是从一个或者几个基本表(或视图)导出的表。它与基本表不同，是一个虚表。数据库中只存放数据的定义，而不存放视图对应的数据，这些数据任然被放在基本表中。一旦基本表发生改变，视图也会发生改变。就像是一个窗户，透过它可以看到数据中自己感兴趣的数据以及变化。</p>
-</blockquote>
-<h3 id="定义视图"><a href="#定义视图" class="headerlink" title="定义视图"></a>定义视图</h3><p>其一般格式为：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span><span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span>)...]</span><br><span class="line"><span class="keyword">as</span> <span class="operator">&lt;</span>子查询<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">check</span> option];</span><br></pre></td></tr></table></figure>
-<p>子查询可以是任意的select语句，是否可以含有order by子句和distinct短语由具体系统的实现。<br><em><strong>只是把视图的定义存入数据字典，并不执行其中的select语句</strong></em>。</p>
-<p>行列子集视图：去掉了基本表其他的某些行和某些列，只保留了主码。<br>分组视图：带有聚集函数和group by子句的查询来定义视图。<br><em><strong>并不是所有视图都是可更新的</strong></em></p>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二章：关系数据库</title>
-    <url>/2021/12/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="第二章：关系数据库"><a href="#第二章：关系数据库" class="headerlink" title="第二章：关系数据库"></a>第二章：关系数据库</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>略</p>
-<h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><blockquote>
-<p>通常包括查询操作和修改操作两大部分。其中选择、投影、并、差、笛卡尔积是5种基本操作。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="关系的完整性"><a href="#关系的完整性" class="headerlink" title="关系的完整性"></a>关系的完整性</h2><blockquote>
-<p>关系模式中有三类完整性约束：实体完整性、参照完整性和用户定义的完整性。</p>
-</blockquote>
-<ol>
-<li>实体完整性：若属性A是基本关系R的主属性，则A不能取空值。</li>
-<li>参照完整性：F是R的外码，它与基本关系S的主码$k_{s}$相对应，则R中的每个元组在F上的值必须满足：或者取空值(F的每个属性值均为空值)，或者等于S中某个云组的主码值。</li>
-<li>用户定义的完整性：自己定义就行。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二章：线性表</title>
-    <url>/2021/12/24/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="1-线性表的定义和特点"><a href="#1-线性表的定义和特点" class="headerlink" title="1. 线性表的定义和特点"></a>1. 线性表的定义和特点</h2><h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>就是很简单由n个数据特性相同的元素构成的有限序列称为线性表。</p>
-<h3 id="1-2-特点"><a href="#1-2-特点" class="headerlink" title="1.2 特点"></a>1.2 特点</h3><ol>
-<li>存在<strong>唯一</strong>一个被称作“第一个”的数据元素。</li>
-<li>存在<strong>唯一</strong>的一个被称作“最后一个”的数据元素。</li>
-<li>除了第一个之外，结构中的每个数据元素均只有<strong>一个前驱。</strong></li>
-<li>除了最后一个之外，结构中的每个数据元素只有<strong>一个后继。</strong></li>
-</ol>
-<span id="more"></span>
-
-<h2 id="2-顺序表"><a href="#2-顺序表" class="headerlink" title="2. 顺序表"></a>2. 顺序表</h2><h3 id="2-1-顺序存储表示基本定义"><a href="#2-1-顺序存储表示基本定义" class="headerlink" title="2.1 顺序存储表示基本定义"></a>2.1 顺序存储表示基本定义</h3><p>指得是用一组<strong>地址连续</strong>的存储单元结构依次存储线性表的数据元素。<strong>他们的逻辑上是相邻的，其物理次序也是相邻的。</strong></p>
-<h3 id="2-2-顺序表的代码实现"><a href="#2-2-顺序表的代码实现" class="headerlink" title="2.2 顺序表的代码实现"></a>2.2 顺序表的代码实现</h3><h4 id="2-2-1-线性表的简单操作"><a href="#2-2-1-线性表的简单操作" class="headerlink" title="2.2.1 线性表的简单操作"></a>2.2.1 线性表的简单操作</h4><ol>
-<li><p>线性表的销毁</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DestroyList</span><span class="params">(Sqlist &amp;L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(L.elem) &#123;</span><br><span class="line">        <span class="keyword">delete</span> L.elem;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>清空线性表</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ClearList</span><span class="params">(Sqlist &amp;L)</span> </span>&#123;</span><br><span class="line">    L.length = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>求线性表的长度</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">(Sqlist L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> L.length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>判断线性表L是否为空</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Sqlist L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(L.Length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="2-2-2-算法中预定的常量"><a href="#2-2-2-算法中预定的常量" class="headerlink" title="2.2.2 算法中预定的常量"></a>2.2.2 算法中预定的常量</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFFASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="comment">//Status是函数类型，其值是函数结果状态</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> ElemType; <span class="comment">//char是可以自己更换的</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-3-顺序表L的初始化"><a href="#2-2-3-顺序表L的初始化" class="headerlink" title="2.2.3 顺序表L的初始化"></a>2.2.3 顺序表L的初始化</h4><p>在如下的代码中，if语句是用来判断的，异常值处理。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(Sqlist &amp;L)</span> </span>&#123;</span><br><span class="line">    L.elem = <span class="keyword">new</span> ElemType[MAXSIZE];</span><br><span class="line">    <span class="keyword">if</span>(!L.elem) <span class="built_in">exit</span> (OVERFLOW);</span><br><span class="line">    L.Length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-4-顺序表的取值"><a href="#2-2-4-顺序表的取值" class="headerlink" title="2.2.4 顺序表的取值"></a>2.2.4 顺序表的取值</h4><p><strong>随机存取</strong>，并且时间复杂程度是O(1)，其具体代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">GetElem</span><span class="params">(Sqlist L, <span class="keyword">int</span> L, ElemType &amp;e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.Length) <span class="keyword">return</span> ERROR;</span><br><span class="line">    e = L.elem[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-5-顺序表的查找-按值查找"><a href="#2-2-5-顺序表的查找-按值查找" class="headerlink" title="2.2.5 顺序表的查找(按值查找)"></a>2.2.5 顺序表的查找(按值查找)</h4><ul>
-<li><p>查找算法的实现步骤</p>
-<ol>
-<li>从第一个元素起，依次和e相比较，若找到与e相等的元素，查找成功，返回该元素的序号。</li>
-<li>若查遍整个顺序表都没有找到，则查找失败，返回0。</li>
-</ol>
-</li>
-<li><p>代码实现</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateElem</span><span class="params">(SqList L, Elemtype e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;L.Length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(L.elemp[i] == e)</span><br><span class="line">            <span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>算法分析</p>
-<p>假如$p_{i}$是查找第$i$个元素的概率，$c_{i}$是找到第$i$个记录需要比较的次数，则在长度为$n$的线性表中，查找成功时的平均查找长度为：  </p>
-<p>​                                                                            $$ ASL=\sum_{i=1}^{n}p_{i}C_{i}$$</p>
-<p>其中如果需要查找的时第一个元素的时候，则只需要比较一次，而查找表中最后一个记录时，则需要比较$n$次，一般情况下$c_{i}=i$。假设每个元素的查找概率相等，即：</p>
-<p>​                                                                            $$p_{i} = \frac{1}{n}$$</p>
-<p>则表达式可以化简为：</p>
-<p>​                                                                            $$ASL=\frac{1}{n}\sum_{i=1}^{n}i=\frac{n+1}{2}$$</p>
-<p>由此可见，顺序表按值查找算法的平均时间复杂程度为O(n)。</p>
-</li>
-</ul>
-<h4 id="2-2-6顺序表的插入"><a href="#2-2-6顺序表的插入" class="headerlink" title="2.2.6顺序表的插入"></a>2.2.6顺序表的插入</h4><ul>
-<li><p>插入的算法步骤</p>
-<ol>
-<li>判断插入位置$i$是否合法($i$值的合法范围是($1\leq i \leq n+1$))，若不合法，则返回ERROR。</li>
-<li>判断顺序表的存储空间是否已满，若满则返回ERROR。</li>
-<li>将第$n$个至第$i$个位置的元素，依次向后移动一个位置，空出第$i$个位置($i=n+1$时，无需移动)。</li>
-<li>将要插入的新元素$e$放入第$i$个位置。</li>
-<li>表长加1。</li>
-</ol>
-</li>
-<li><p>插入代码的具体实现</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListInsert_Sq</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> i, Elemtype e)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// i值的合法性</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L.Length) <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="comment">// 当前存储空间已满</span></span><br><span class="line">    <span class="keyword">if</span>(L.Length == MAXSIZE) <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="comment">// 插入位置及之后的元素后移(从n开始)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = L.Length; j&gt;=i<span class="number">-1</span>; j--) &#123;</span><br><span class="line">        L.elem[j+<span class="number">1</span>] = L.elem[j];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将新元素放入第i个位置</span></span><br><span class="line">    L.elem[i<span class="number">-1</span>] = e;</span><br><span class="line">    <span class="comment">// 表长加一</span></span><br><span class="line">    L.Length++;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>算法分析</p>
-<p>假设$p_{i}$是第$i$个元素之前插入一个元素的概率，$E_{ins}$为在长度为$n$的线性表中插入一个元素时，所需要移动元素的次数的期望值(平均次数)，则有：</p>
-<p>​                                                                    $$E_{ins} = \sum_{i=1}^{n+1}p_{i}(n-i+1)$$</p>
-<p>为了一般性，可以设置在线性表的任何位置上插入元素都是等概率的，即：</p>
-<p>​                                                                    $$p_{i} = \frac{i}{n+1}$$</p>
-<p>则原式可以简化为：</p>
-<p>​                                                                    $$E_{ins}=\frac{1}{n+1}\sum_{i=1}^{n+1}(n-i+1)=\frac{n}{2}$$</p>
-<p>综上，顺序表的插入算法的时间平均复杂度为O(n)。</p>
-</li>
-</ul>
-<h4 id="2-2-7-顺序表的删除"><a href="#2-2-7-顺序表的删除" class="headerlink" title="2.2.7 顺序表的删除"></a>2.2.7 顺序表的删除</h4><ul>
-<li><p>删除算法的步骤</p>
-<ol>
-<li>判断要删除的位置是否合法($1\leq i \leq n$)。</li>
-<li>将第i+1个至第n个的元素依次向前移动一个位置(i=n时，无需移动)。</li>
-<li>表长减1</li>
-</ol>
-</li>
-<li><p>删除算法的具体实现</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListDelete_Sq</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 判断i值合法程度</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L.Length) <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;L.Length<span class="number">-1</span>; j++) &#123;</span><br><span class="line">        L.elem[j<span class="number">-1</span>] = L.elem[j];</span><br><span class="line">    &#125;</span><br><span class="line">    L.Length--;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>算法分析</p>
-<p>假设$p_i$是删除第$i$个元素的概率，则$E_{del}$为长度为$n$的线性表中删除一个元素时所需要移动元素次数的期望值(平均次数)，则有</p>
-<p>​                                                                        $$E_{del} = \sum_{i=1}^{n}p_{i}(n-i)$$</p>
-<p>为了保证一般性，假设任何位置被删除的概率都是相等的，即：</p>
-<p>​                                                                        $$p_{j}=\frac{1}{n}$$</p>
-<p>所以原式可以化简为：</p>
-<p>​                                                                        $$E_{del} = \frac{1}{n}\sum_{i=1}^{n}(n-i)=\frac{n-1}{2}$$</p>
-<p>综上所述：顺序表删除的平均算法时间复杂程度为O(n)。</p>
-</li>
-</ul>
-<h3 id="2-3-顺序表的优缺点"><a href="#2-3-顺序表的优缺点" class="headerlink" title="2.3 顺序表的优缺点"></a>2.3 顺序表的优缺点</h3><ol>
-<li><p>优点</p>
-<ul>
-<li><p>存储密度大</p>
-</li>
-<li><p>可以随机存取表中任意元素(知道地址和索引后，直接访问)</p>
-</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>在插入、删除某一元素时，需要大量移动元素</li>
-<li>浪费存储空间</li>
-<li>属于静态存储形式，数据元素的个数不能自由扩充</li>
-</ul>
-</li>
-</ol>
-<h3 id="2-4-顺序表的特点"><a href="#2-4-顺序表的特点" class="headerlink" title="2.4 顺序表的特点"></a>2.4 顺序表的特点</h3><p>简单来说就是逻辑关系相邻的数据，他们的存储也是相邻的。</p>
-<ul>
-<li>特点<ol>
-<li>地址连续</li>
-<li>依次存放</li>
-<li>随机存取</li>
-<li>类型相同</li>
-</ol>
-</li>
-</ul>
-<p>我们可以发现，其特点和数据很像，但是表长可变，数组长度不可动态定义。</p>
-<h2 id="3-链表"><a href="#3-链表" class="headerlink" title="3. 链表"></a>3. 链表</h2><h3 id="3-1-单链表中的相关定义"><a href="#3-1-单链表中的相关定义" class="headerlink" title="3.1 单链表中的相关定义"></a>3.1 单链表中的相关定义</h3><ol>
-<li>结点：存储直接后继位置的域成为<strong>指针域</strong>。指针域中存储的信息成为<strong>指针</strong>或<strong>链。</strong>其中存储数据元素信息的域称为<strong>数据域</strong>。</li>
-<li>首元结点：是指链表中存储第一个数据元素$a_{1}$的结点。</li>
-<li>头指针：是指向链表中<strong>第一个结点</strong>的指针。若链表设有头结点，则头指针所指向结点为线性表的<strong>头结点</strong>；若不设头结点，则头指针所指向结点为该线性表的<strong>首元结点</strong>。它存储的是头结点的地址或者首元结点的地址。</li>
-<li>头结点：是指在首元结点之前附设一个结点，其指针域指向<strong>首元结点</strong>，头结点的数据域可以不存储任何信息，也可以存储对链表的其他的附加信息。</li>
-<li>其他链表：<ul>
-<li>单链表：结点只有一个指针域的链表</li>
-<li>双链表：结点有两个指针域的链表</li>
-<li>循环链表：首尾相接的链表</li>
-</ul>
-</li>
-</ol>
-<h3 id="3-2-单链表的代码实现"><a href="#3-2-单链表的代码实现" class="headerlink" title="3.2 单链表的代码实现"></a>3.2 单链表的代码实现</h3>]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第五章：数据库完整性</title>
-    <url>/2021/12/07/%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7/</url>
-    <content><![CDATA[<h1 id="数据完整性概述"><a href="#数据完整性概述" class="headerlink" title="数据完整性概述"></a>数据完整性概述</h1><h2 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h2><blockquote>
-<p>符合现实世界的描述</p>
-</blockquote>
-<h2 id="相容性"><a href="#相容性" class="headerlink" title="相容性"></a>相容性</h2><blockquote>
-<p>同一对象在不同表里面是符合逻辑的。比如我的地址、年龄，在两个表里面应该是一样的</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="维护完整性"><a href="#维护完整性" class="headerlink" title="维护完整性"></a>维护完整性</h2><ol>
-<li>提供定义完整性约束条件的机制</li>
-<li>提供完整性检查的方法</li>
-<li>进行违约处理</li>
-</ol>
-<h1 id="三大完整性"><a href="#三大完整性" class="headerlink" title="三大完整性"></a>三大完整性</h1><h2 id="实体完整性"><a href="#实体完整性" class="headerlink" title="实体完整性"></a>实体完整性</h2><blockquote>
-<p>主码唯一，且非空</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    <span class="keyword">primary</span> key(id));</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">primary</span> key, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>));</span><br></pre></td></tr></table></figure>
-
-<h2 id="参照完整性"><a href="#参照完整性" class="headerlink" title="参照完整性"></a>参照完整性</h2><blockquote>
-<p>外码要么有，要么只有一个</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span>, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    title <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    teacher_id <span class="type">int</span>, </span><br><span class="line">    <span class="keyword">primary</span> key(id), </span><br><span class="line">    <span class="keyword">foreign</span> key(id) <span class="keyword">references</span> course_description(course_id));</span><br></pre></td></tr></table></figure>
-
-<h2 id="用户定义完整性"><a href="#用户定义完整性" class="headerlink" title="用户定义完整性"></a>用户定义完整性</h2><ol>
-<li>非空<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure></li>
-<li>列值唯一<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">unique</span>);</span><br></pre></td></tr></table></figure></li>
-<li>满足某个条件表达式 check来写<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     sex <span class="type">char</span>(<span class="number">2</span>) <span class="keyword">check</span>(sex <span class="keyword">in</span> (<span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;女&#x27;</span>)),</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1><blockquote>
-<p>断言创建以后，任何对断言中涉及关系的操作都会触发关系数据库系统对断言的检查，任何使断言不为真值的操作都会被拒绝执行。</p>
-</blockquote>
-<p>其sql语句如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> assertion <span class="operator">&lt;</span>断言名<span class="operator">&gt;</span> <span class="operator">&lt;</span><span class="keyword">check</span> 子句<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
-<p>例如：限制每一门课程最多有60名学生选修</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> assertion asse_sc_cnum1</span><br><span class="line"><span class="keyword">check</span>(<span class="number">60</span> <span class="operator">&gt;=</span> <span class="keyword">all</span>(<span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)</span><br><span class="line">                <span class="keyword">from</span> sc</span><br><span class="line">                <span class="keyword">group</span> <span class="keyword">by</span> cno)</span><br><span class="line">                );</span><br></pre></td></tr></table></figure>
-<p>删除断言名称：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> assertion <span class="operator">&lt;</span>断言名<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h1><blockquote>
-<p>触发器也叫做：事件-&gt;条件-&gt;动作 规则。也就是说事件在某个条件满足的时，会触发某个规则。是一段程序，可以在特定的时刻被自动触发执行。</p>
-</blockquote>
-<p>其sql语句如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> <span class="operator">&lt;</span>触发器名<span class="operator">&gt;</span>   <span class="comment">/*每当触发事件发生时，该触发器被激活*/</span></span><br><span class="line">&#123;before<span class="operator">|</span>after&#125; <span class="operator">&lt;</span>触发事件<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="operator">&lt;</span>表面<span class="operator">&gt;</span>   <span class="comment">/*指明触发器激活的时间是在执行触发事件前或后*/</span></span><br><span class="line"><span class="keyword">referencing</span> <span class="keyword">new</span><span class="operator">|</span><span class="keyword">old</span> <span class="type">row</span> <span class="keyword">as</span> <span class="operator">&lt;</span>变量<span class="operator">&gt;</span>   <span class="comment">/*referencing指出引用的变量*/</span></span><br><span class="line"><span class="keyword">for</span> <span class="keyword">each</span>&#123;<span class="type">row</span><span class="operator">|</span>statement&#125;     <span class="comment">/*定义触发器的类型，指明动作体执行的频率*/</span></span><br><span class="line">[<span class="keyword">when</span> <span class="operator">&lt;</span>触发条件<span class="operator">&gt;</span>] <span class="operator">&lt;</span>触发动作体<span class="operator">&gt;</span>   <span class="comment">/*仅当触发条件为真时才执行触发动作体*/</span> </span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第四章：数据库安全性概述</title>
-    <url>/2021/12/07/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="数据库安全性概述"><a href="#数据库安全性概述" class="headerlink" title="数据库安全性概述"></a>数据库安全性概述</h1><blockquote>
-<p>是指保护数据库以防止不合法使用所造成的数据泄露、更改或者破坏。</p>
-</blockquote>
-<h2 id="不安全因素"><a href="#不安全因素" class="headerlink" title="不安全因素"></a>不安全因素</h2><ol>
-<li>非授权用户对数据库的恶意存取和破坏</li>
-<li>数据库中重要或敏感的数据被泄露</li>
-<li>安全环境的脆弱性<span id="more"></span>
-<h2 id="自主存取控制方法"><a href="#自主存取控制方法" class="headerlink" title="自主存取控制方法"></a>自主存取控制方法</h2><blockquote>
-<p>主要是通过对用户进行授予或收回对数据的操作权限。</p>
-</blockquote>
-</li>
-<li>grant、revoke<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">to</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span>；</span><br><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">from</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span>；</span><br></pre></td></tr></table></figure></li>
-<li>创建用户<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span><span class="operator">&lt;</span>username<span class="operator">&gt;</span> <span class="keyword">with</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h1 id="安全性控制"><a href="#安全性控制" class="headerlink" title="安全性控制"></a>安全性控制</h1><ol>
-<li>用户身份识别：<ol>
-<li>静态口令识别</li>
-<li>动态口令识别</li>
-<li>生物特征识别</li>
-<li>智能卡识别</li>
-</ol>
-</li>
-<li>存储控制</li>
-<li><strong>自主存取控制方法</strong>：<blockquote>
-<p>字面意思就是我们用户可以定义和分配其他用户的操作权限。主要通过grant、revoke来惊喜控制。由两个元素构成：数据对象和操作权限。我们定义用户的存取权限称为授权。</p>
-</blockquote>
- 主要存取方式<table>
-<thead>
-<tr>
-<th>对象类型</th>
-<th>对象</th>
-<th>操作类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>数据库模式</td>
-<td>模式</td>
-<td>create schema</td>
-</tr>
-<tr>
-<td>数据库模式</td>
-<td>基本表</td>
-<td>create table、alter table</td>
-</tr>
-<tr>
-<td>数据库模式</td>
-<td>视图</td>
-<td>create view</td>
-</tr>
-<tr>
-<td>数据库模式</td>
-<td>索引</td>
-<td>create index</td>
-</tr>
-<tr>
-<td>数据</td>
-<td>基本表和视图</td>
-<td>select、insert、update、delete、references、all privileges</td>
-</tr>
-<tr>
-<td>数据</td>
-<td>属性列</td>
-<td>select、insert、update、references、all privileges</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><em><strong>references权限代表是否允许创建外键、all privileges代表所有权限。</strong></em></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-</li>
-<li>授权 grant<blockquote>
-<p>授权命令是由数据库管理员使用的，若给用户分配权限时使用with grant option语句，则普通用户获权后，可以把自己的权限授予其他人。</p>
-</blockquote>
-其基本语法如下：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>[(属性名)] [,<span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="operator">&gt;</span>]...</span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">grant</span> option];</span><br></pre></td></tr></table></figure></li>
-<li>回收权利<br>其基本语法如下：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>[(属性名)] [,<span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="operator">&gt;</span>]...[cascade<span class="operator">|</span>restrict];</span><br></pre></td></tr></table></figure></li>
-<li>数据库角色<blockquote>
-<p>角色就是一类人，比如CEO、总监、普通员工等等，可以给这一类人授权。</p>
-</blockquote>
-<ol>
-<li>角色的创建<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> role <span class="operator">&lt;</span>角色名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>给角色授权<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span><span class="operator">&lt;</span>对象名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>角色<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="operator">&gt;</span>]...</span><br></pre></td></tr></table></figure></li>
-<li>将一个角色授予其他的角色或用户<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>角色<span class="number">1</span><span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="number">2</span><span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>角色<span class="number">3</span><span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="number">1</span><span class="operator">&gt;</span>]...</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
-<em><strong>角色3获得的是角色1与角色2权限的总和。</strong></em></li>
-<li>角色权限的回收<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span><span class="operator">&lt;</span>对象名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>角色<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="operator">&gt;</span>]...</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ol>
-<h1 id="视图机制"><a href="#视图机制" class="headerlink" title="视图机制"></a>视图机制</h1><blockquote>
-<p>就是为不同用户定义不同的视图，把不需要的数据隐藏起来，这样的话用户就不会瞎操作了。</p>
-</blockquote>
-<h1 id="审计"><a href="#审计" class="headerlink" title="审计"></a>审计</h1><blockquote>
-<p>把对数据库的所有操作都记录到审计日志中，然后可以通过日志审查这个里面是否有一些违法的行为</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 对修改sc表结构或修改sc表数据的操作进行审计</span></span><br><span class="line"><span class="comment">audit alter, update on sc;</span></span><br><span class="line"><span class="comment">/* 取消对sc表的审计</span></span><br><span class="line"><span class="comment">noaudit alter, update on sc;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第六章：关系数据库理论</title>
-    <url>/2021/12/07/%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA/</url>
-    <content><![CDATA[<p><strong>为什么要引入范式？</strong></p>
-<ol>
-<li>数据冗余</li>
-<li>更新异常</li>
-<li>插入异常</li>
-<li>删除异常<span id="more"></span></li>
-</ol>
-<p><strong>范式分类</strong></p>
-<blockquote>
-<p>设计关系数据库的时候，遵从不同的规范要求，这些不同的规范要求被称为不同的范式，各种范式呈递次范式，越高的范式，数据库冗余越小。<br>目关系数据库有六种范式：第一范式(1NF)、第二范式(2NF)、第三范式(3NF)、巴斯-科德范式(BCNF)、第四范式(4NF)和第五范式(5NF，也称为完美范式)。</p>
-</blockquote>
-<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ol>
-<li><p><strong>非平凡函数依赖</strong></p>
-<blockquote>
-<p>x-&gt;y，但y不属于x，则称x-&gt;y是非平凡的函数依赖。<br> 也就是说，你是来蹭课的，上课的时候能看见你，但是其实你不属于上这个课的人。</p>
-</blockquote>
-</li>
-<li><p><strong>平凡函数依赖</strong></p>
-<blockquote>
-<p>x-&gt;y，y属于x，则称x-&gt;y是平凡的函数依赖。<br> 你的班级能够找到你，而且你也是这个班级的。</p>
-</blockquote>
-</li>
-<li><p><strong>完全函数依赖</strong></p>
-<blockquote>
-<p>定义略。如果X集合能够刚好推出Y来，但是X的真子集就不行。也就是说，如果X集合中少任何一个元素的话，都不能推出Y来。</p>
-</blockquote>
-</li>
-<li><p><strong>部分函数依赖</strong></p>
-<blockquote>
-<p>定义略。就像学号能推出姓名，学号和身份证号一起也能推出姓名，如果去掉身份证号也没有影响。</p>
-</blockquote>
-</li>
-</ol>
-<h1 id="候选码"><a href="#候选码" class="headerlink" title="候选码"></a>候选码</h1><blockquote>
-<p>概念：能够推出所有的属性</p>
-</blockquote>
-<h2 id="如何选出候选码？"><a href="#如何选出候选码？" class="headerlink" title="如何选出候选码？"></a>如何选出候选码？</h2><ol>
-<li>只出现在左边的一定是候选码</li>
-<li>只出现在右边的一定不是候选码</li>
-<li>左右都出现的不一定是候选码</li>
-<li>左右都不出现的一定是候选码</li>
-<li>再求确定的候选码的闭包，如果可以推出全部，那么当前确定的就是候选码，否则你要把每一个可能的值放进当前确定的候选码里面求闭包</li>
-</ol>
-<p>例如：R&lt;U, F&gt;, U&lt;A, B, C, D, E, G&gt;是属性集合, F=(AB-&gt;C, CD-&gt;E, E-&gt;A, A-&gt;G)是映射，求候选码：</p>
-<blockquote>
-<p>解：我们可以的知：<br>一定是候选码：B、D<br>一定不是候选码：G<br>不一定是候选码：A、C、E<br>BD啥也推不出来，所以要把每一个不一定都放进去测试<br>(BDA)+ = 可推出：C、E、G   所以可以推出ABCDEG<br>(BDC)+ = 可推出：E、A、G   所以可以推出ABCDEG<br>(BDE)+ = 可推出：A、G、C   所以可以推出ABCDEG<br>综上所述，候选码是{(BDA),(BDC),(BDE)};</p>
-</blockquote>
-<h2 id="一些其他的概念"><a href="#一些其他的概念" class="headerlink" title="一些其他的概念"></a>一些其他的概念</h2><ol>
-<li>超码：能表示出所有属性的集合，比如(BDA), (BDC), (BDE), BDCA, BDEA, ABCDE。候选码是最小的超码。</li>
-<li>主码：从候选码里面任意选出一个作为主码。</li>
-<li>主属性：包含在所有候选码的属性，比如ABCDE</li>
-<li>非主属性：不包含在候选码中的属性，比如G</li>
-<li>全码：所有的属性都是主码</li>
-</ol>
-<h2 id="三大范式"><a href="#三大范式" class="headerlink" title="三大范式"></a>三大范式</h2><ol>
-<li>1NF<blockquote>
-<p>所有字段值都是不可以分解的原子值<br>比如某些系统需要”地址”这个属性，本来讲地址设置为一个数据表的字段就行，但是如果系统经常会访问”地址”属性中”城市”的部分，那么就非要讲”地址”这个属性值重新拆分为省份、城市、详细地址等多个部分进行存储，这样在对地址中某一部分操作的时候会很方便。</p>
-</blockquote>
-</li>
-<li>2NF<blockquote>
-<p>不包含非主属性对码的部分函数依赖，一个表只能保存一种数据，不可以把多种数据保存在同一张数据库表中。</p>
-</blockquote>
-</li>
-<li>3NF<blockquote>
-<p>不包含非主属性对码的传递函数依赖，确保数据表中的每一列数据都和主键直接相关，而不能间接相关。</p>
-</blockquote>
-</li>
-<li>BCNF<blockquote>
-<p>消除每一属性对候选键的传递依赖，BCNF是修正的第三范式。</p>
-</blockquote>
-</li>
-</ol>
-<h1 id="求最小的函数依赖集"><a href="#求最小的函数依赖集" class="headerlink" title="求最小的函数依赖集"></a>求最小的函数依赖集</h1><p> <strong>什么是依赖？</strong></p>
-<blockquote>
-<p>依赖是指关系中一个或一组属性的值可以决定其他属性的值，比如A-&gt;B就是一个依赖。</p>
-</blockquote>
-<p> <strong>如何求最小依赖？</strong></p>
-<ol>
-<li>拆右边为多个元素，比如A-&gt;BC拆为A-&gt;B和A-&gt;C</li>
-<li>除去当前元素，求它的闭包，把集合里面的元素全部都用完。看看能不能推出当前元素的右端值，可以就不要，不可以就保留。</li>
-<li>左边最小化(通过遮住元素看看能不能推出其他的元素)，比如BCD，遮住B，看CD能不能推出B来，如果不能则B就保留，否则就去掉。C和D同理。</li>
-</ol>
-<p><strong>例题</strong>：已知关系R&lt;U, F&gt;, U{A,B,C,D,E,F,G}, F={BCD-&gt;A, BC-&gt;E, A-&gt;F, F-&gt;G, C-&gt;D, A-&gt;G}求F的最小依赖                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </p>
-<blockquote>
-<p><strong>解</strong>：右边没有可以拆分的。<br>    除去BCD这个元素，(BCD)+ =BCDE，发现没有其他元素可以推出A来，保留。<br>    除去BC这个元素，(BC)+ = BCD，其他元素推不出E，保留。<br>    除去A这个元素，(A)+ = AG，其他元素推不出F，保留。<br>    除去F这个元素，(F)+ = F，其他元素推不出G，保留。<br>    除去C这个元素，(C)+ = D，其他元素推不出D来，保留。<br>    除去A这个元素，(A)+ = FG，可以推出G来，去掉。<br>    然后再把左边多的元素看看能不能拆开，BCD，遮住B，CD并不能推出B，同理，不能推出C，但是D可以被推出，所以BCD变成BD。<br>    综上所述：最小依赖为{BC-&gt;A, BC-&gt;E, A-&gt;F, F-&gt;G, C-&gt;D}</p>
-</blockquote>
-<h2 id="模式分解"><a href="#模式分解" class="headerlink" title="模式分解"></a>模式分解</h2><ol>
-<li>准则：无损连接和保持函数依赖。</li>
-<li>无损：就是分解后再次连接，和分解之前一样。</li>
-<li>依赖：依赖不变。</li>
-</ol>
-<p><strong>例题</strong>：一直R{ABCDEGH}, F={A-&gt;D,E-&gt;D,D-&gt;B,BC-&gt;D,DC-&gt;A}，求保持函数依赖的3NF的分解。</p>
-<ol>
-<li>求出最小函数依赖集</li>
-<li>把不在F里面的属性都找出来，单独分成一类</li>
-<li>把每一个依赖左边相同的分为一类，没有一样的，那就把A-&gt;D改成{AD}，如果一样{A-&gt;B, A-&gt;C} 那么就改为{ABC}</li>
-<li>如果候选码没出现在分离(最小依赖集)里面，把任意一个候选码作为一类。<blockquote>
-<p><strong>解</strong>：最小函数依赖集为：Fmin={A-&gt;D,E-&gt;D,D-&gt;B,BC-&gt;D,DC-&gt;A}。<br>GH不在里面，所以单独分为一类{GH}<br>候选码：CE<br>{AD}{ED}{DB}{BCD}{DCA}{CE}{GH}</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>复习</category>
-      </categories>
-      <tags>
-        <tag>sql语言</tag>
-        <tag>知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>决策树</title>
-    <url>/2021/12/28/%E5%86%B3%E7%AD%96%E6%A0%91/</url>
+    <title>sklearn决策树</title>
+    <url>/2021/12/28/sklearn%E5%86%B3%E7%AD%96%E6%A0%91/</url>
     <content><![CDATA[<h1 id="决策树-descision-tree"><a href="#决策树-descision-tree" class="headerlink" title="决策树(descision tree)"></a>决策树(descision tree)</h1><h2 id="1-决策树的基本概念"><a href="#1-决策树的基本概念" class="headerlink" title="1.决策树的基本概念"></a>1.决策树的基本概念</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><p>决策树是一种基本的分类于回归方法，在分类问题中，表示基于特征对实例进行分类的过程。</p>
 <h3 id="1-2-决策树的三个基本步骤"><a href="#1-2-决策树的三个基本步骤" class="headerlink" title="1.2 决策树的三个基本步骤"></a>1.2 决策树的三个基本步骤</h3><ul>
 <li>特征选择</li>
@@ -834,7 +140,7 @@
 <h3 id="1-3-用决策树分类"><a href="#1-3-用决策树分类" class="headerlink" title="1.3 用决策树分类"></a>1.3 用决策树分类</h3><p>从<strong>根节点</strong>开始，对实例的某一特征进行测试，根据测试结果将实例分配到其<strong>子节点</strong>，此时每一个子节点对应着该特征的一个取值，如此递归对实例进行测试并分配，直到到达<strong>叶节点</strong>，最后将实例分到<strong>叶节点</strong>的类中。</p>
 <span id="more"></span>
 
-<p><img src="/.io//%E5%86%B3%E7%AD%96%E6%A0%91%5C%E5%86%B3%E7%AD%96%E6%A0%91%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg"></p>
+<p><img src="/.io//sklearn%E5%86%B3%E7%AD%96%E6%A0%91%5C%E5%86%B3%E7%AD%96%E6%A0%91%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg"></p>
 <p>其中圆点是<strong>内部节点</strong>，方框是<strong>叶节点</strong></p>
 <p><strong>关键概念：结点</strong></p>
 <ol>
@@ -868,7 +174,7 @@
 </ul>
 <blockquote>
 <p>首先：确定当前数据集上的决定性特征，为了得到该决定性特征，必须评估每个特征，完成测试之后，原始数据集就被划分为几个数据子集，这些数据子集会分布在第一个决策点的所有分支上，如果某个分支下的数据属于同一类型，则当前无需阅读的垃圾邮件已经正确的划分数据分类，无需进一步对数据集进行分割，如果不属于同一类，则要重复划分数据子集，直到所有相同类型的数据均在一个数据子集内。</p>
-<p><img src="/.io//%E5%86%B3%E7%AD%96%E6%A0%91%5C%E5%86%B3%E7%AD%96%E6%A0%91%E9%82%AE%E7%AE%B1%E9%97%AE%E9%A2%98.jpg"></p>
+<p><img src="/.io//sklearn%E5%86%B3%E7%AD%96%E6%A0%91%5C%E5%86%B3%E7%AD%96%E6%A0%91%E9%82%AE%E7%AE%B1%E9%97%AE%E9%A2%98.jpg"></p>
 </blockquote>
 <h3 id="2-3-决策树伪代码"><a href="#2-3-决策树伪代码" class="headerlink" title="2.3 决策树伪代码"></a>2.3 决策树伪代码</h3><p>创建分支的伪代码createBranch()</p>
 <p>检测数据集中每一个子项是否属于同一类：</p>
@@ -879,7 +185,7 @@
 <h3 id="2-4-信息增益"><a href="#2-4-信息增益" class="headerlink" title="2.4 信息增益"></a>2.4 信息增益</h3><h4 id="2-4-1-简单概述"><a href="#2-4-1-简单概述" class="headerlink" title="2.4.1 简单概述"></a>2.4.1 简单概述</h4><p>划分数据集的大原则是：将无序数据变得更加有序，信息论是量化处理信息得分支科学，在划分数据集前后信息发生得变化称为<strong>信息增益</strong>，<strong>获得信息增益最高的特征就是最好的选择</strong>，集合信息的度量方式称为：<strong>香农熵</strong>，或者简称为<strong>熵</strong>。</p>
 <h4 id="2-4-2-结合实例"><a href="#2-4-2-结合实例" class="headerlink" title="2.4.2 结合实例"></a>2.4.2 结合实例</h4><p>希望通过所给的训练数据学习一个贷款申请的决策树，用以对未来的贷款申请进行分类，即当新的客户提出贷款申请时，根据申请人的特征利用决策树决定是否批准贷款申请。</p>
 <p><strong>特征选择就是决定用哪个特征来划分特征空间</strong>。</p>
-<p><img src="/.io//%E5%86%B3%E7%AD%96%E6%A0%91%5C%E5%86%B3%E7%AD%96%E6%A0%91%E8%B4%B7%E6%AC%BE%E7%94%B3%E8%AF%B7.jpg"></p>
+<p><img src="/.io//sklearn%E5%86%B3%E7%AD%96%E6%A0%91%5C%E5%86%B3%E7%AD%96%E6%A0%91%E8%B4%B7%E6%AC%BE%E7%94%B3%E8%AF%B7.jpg"></p>
 <p>第一个图的根节点的特征是年龄，有3个取值，不同的取值有不同的节点。第二个图的根节点的特征是工作，有2个取值，不同的取值有不同的节点。两个决策树都可以延续下去，但是，我们应该选取那一个特征更好一些呢？一般来说，如果一个特征具有更好的分类能力，或者说，按照这个特征将数据集分割的子集，使得各个子集在当前条件下有最好的分类，那么就更应该选择这个特征。</p>
 <h4 id="2-4-3-信息增益和经验熵"><a href="#2-4-3-信息增益和经验熵" class="headerlink" title="2.4.3 信息增益和经验熵"></a>2.4.3 信息增益和经验熵</h4><p><strong>什么是信息增益？</strong>在划分数据集之前之后信息发生的变化成为信息增益，知道如何计算信息增益，我们就可以计算每个特征值划分数据集获得的信息增益，获得信息增益最<strong>高</strong>的特征就是最好的选择。</p>
 <p><strong>熵定义为信息的期望</strong>，在待分类的事物可能划分在多个类中，则$x_{i}$的信息定义为：<br>$$<br>l(x_{i})=-log_{2}p(x_i)<br>$$<br>其中$p(x_{i})$是该分类的概率。</p>
@@ -1072,12 +378,730 @@
 <li><p>那么怎么来判断是否带来泛化性能的提升那？最简单的就是留出法，即预留一部分数据作为验证集来进行性能评估。</p>
 </li>
 </ul>
-<h2 id="6-sklearn中的剪枝参数调优"><a href="#6-sklearn中的剪枝参数调优" class="headerlink" title="6. sklearn中的剪枝参数调优"></a>6. sklearn中的剪枝参数调优</h2>]]></content>
+<h2 id="6-sklearn中的剪枝参数调优"><a href="#6-sklearn中的剪枝参数调优" class="headerlink" title="6. sklearn中的剪枝参数调优"></a>6. sklearn中的剪枝参数调优</h2><p>在不加限制的条件下，一棵决策树会生长到衡量不纯度指标最优，或者没有更多的特征可用为止，这样的决策树往往会过拟合，这就是说，<strong>它会在训练集上表现很好，在测试集上却表现不太行</strong>。我们收集的数据不可能与整体的状况完全一致，因此当一棵决策树对训练数据有了很好的解释性，也就是说它找出的规则必然包括了训练样本中的噪声，并使它对未知的数据拟合程度不足。</p>
+<p>就比如说我们的树对训练集的拟合程度是1.0，但是对测试集只有的拟合程度只有80左右，<strong>说明它对训练集过拟合了，融入了噪声等</strong>。</p>
+<h3 id="6-1-剪枝参数"><a href="#6-1-剪枝参数" class="headerlink" title="6.1 剪枝参数"></a>6.1 剪枝参数</h3><p>为了让决策树有更好的泛化性，我们要对决策树进行剪枝。<strong>剪枝策略对决策树的影响巨大，正确的剪枝策略是优化决策树算法的核心</strong>。</p>
+<h4 id="6-1-1-max-depth"><a href="#6-1-1-max-depth" class="headerlink" title="6.1.1 max_depth"></a>6.1.1 max_depth</h4><p>限制树的最大深度，超过设点的深度的树枝全部被剪掉，在高纬度低样本量时非常有效果。决策树多生长一层，对样本量的需求会更增加一倍，以限制树深度能够有效地限制过拟合。在<strong>集成算法</strong>中也非常实用。在实际中，可以先从3开始，根据结果再决定是否增加深度。也就是说最终结果只有max_depth层，超过这个数值的层将会被全部删除。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">clf = tree.DecisionTreeClassifier(criterion=<span class="string">&quot;entropy&quot;</span>, </span><br><span class="line">                                  random_state=<span class="number">0</span>,</span><br><span class="line">                                  splitter=<span class="string">&quot;random&quot;</span>,</span><br><span class="line">                                  max_depth=<span class="number">3</span>)</span><br><span class="line">clf = clf.fit(Xtrain, Ytrain)</span><br><span class="line">score = clf.score(Xtest, Ytest)</span><br><span class="line">score</span><br></pre></td></tr></table></figure>
+
+<p>这个结果跟原来的一样，说明，原先的决策树3层往后是多余的，更推荐使用这个，计算少，正确率高。</p>
+<h4 id="6-1-2-min-samples-leaf"><a href="#6-1-2-min-samples-leaf" class="headerlink" title="6.1.2 min_samples_leaf"></a>6.1.2 min_samples_leaf</h4><p>min_samples_leaf限定后，一个节点在分枝后，每个子节点必须包含至少min_samples_leaf个训练样本，否则该该分枝可能就不会发生，或者，分枝会朝着满足每个节点都包含样本个数达到min_samples_leaf个样本的方向发生。</p>
+<p>一般是搭配max_depth一起用，在回归树中，可以让模型变得更加平滑。这个参数的数量设置太小可能会引起过拟合，设置得太大就会阻止模型学习数据。一般建议从5开始使用。如果叶节点含有得样本数量大，建议输入浮点数作为样本量百分比来使用，同时这个参数可以保证每个叶子得最小尺寸。避免低方差，过拟合的叶子节出现。类别不同的问题，1通常是最好的选择。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">clf = tree.DecisionTreeClassifier(criterion=<span class="string">&quot;entropy&quot;</span>, </span><br><span class="line">                                  random_state=<span class="number">0</span>,</span><br><span class="line">                                  splitter=<span class="string">&quot;random&quot;</span>,</span><br><span class="line">                                  max_depth=<span class="number">3</span>,</span><br><span class="line">                              	  min_samples_leaf=<span class="number">10</span>)</span><br><span class="line">clf = clf.fit(Xtrain, Ytrain)</span><br><span class="line">score = clf.score(Xtest, Ytest)</span><br><span class="line">score</span><br></pre></td></tr></table></figure>
+
+<p>在原来的叶节点中，有的样本个数都是在10以下，但是加了这个参数之后，这些节点的个数都在10以上了，跟其同级叶子节点的个数平均了。然后得分变低了，不采用这个参数。</p>
+<h4 id="6-1-3-min-samples-split"><a href="#6-1-3-min-samples-split" class="headerlink" title="6.1.3 min_samples_split"></a>6.1.3 min_samples_split</h4><p>min_samples_split限定，一个节点必要包含至少min_samples_split个训练样本，这个节点才能被允许分枝，否则分枝就不会发生。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">clf = tree.DecisionTreeClassifier(criterion=<span class="string">&quot;entropy&quot;</span>, </span><br><span class="line">                                  random_state=<span class="number">0</span>,</span><br><span class="line">                                  splitter=<span class="string">&quot;random&quot;</span>,</span><br><span class="line">                                  max_depth=<span class="number">3</span>,</span><br><span class="line">                                  max_samples_split=<span class="number">25</span>)</span><br><span class="line">clf = clf.fit(Xtrain, Ytrain)</span><br><span class="line">score = clf.score(Xtest, Ytest)</span><br><span class="line">score</span><br></pre></td></tr></table></figure>
+
+<p>在图中我们可以发现，它的节点(样本数小于25的)已经不再分了。得分更低，不采用。</p>
+<h4 id="6-1-4-max-features"><a href="#6-1-4-max-features" class="headerlink" title="6.1.4 max_features"></a>6.1.4 max_features</h4><p>max_features限制分枝时考虑的特征个数，超过限制个数的特征都会被舍弃。</p>
+<p>max_features是用来限制高纬度数据的过拟合的剪枝参数，其方法更加直接。比如900个特征，只选择max_features个。是直接限制可以使用的特征个数，而强制让决策树停下的参数。在不知道决策树各个特征重要程度的前提下，不要使用，避免学习不足。如果希望降维的话，还是建议使用PCA、ICA或者其他降维方法。</p>
+<h4 id="6-1-5-min-impurity-decrease"><a href="#6-1-5-min-impurity-decrease" class="headerlink" title="6.1.5 min_impurity_decrease"></a>6.1.5 min_impurity_decrease</h4><p>min_impurity_decrease限制信息增益的大小。信息增益小于设定数值的分枝不会发生。</p>
+<h2 id="6-2-确认最优的剪枝参数"><a href="#6-2-确认最优的剪枝参数" class="headerlink" title="6.2 确认最优的剪枝参数"></a>6.2 确认最优的剪枝参数</h2><p>那么我们该如何确定每个参数应该怎么填呢？手段填的话，未免会效率很低。这个时候，我们就要使用超参数的曲线来判断了，继续使用我们已经训练好的决策树模型clf。超参数的学习曲线，是一条以超参数的取值为横坐标，模型的度量指标为纵坐标的曲线，它是用来衡量不通过超参数取值下模型的表现的线。我们这个模型中，模型的度量指标就是score。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如何确定最优的参数</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">test = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    clf = tree.DecisionTreeClassifier(criterion=<span class="string">&#x27;entropy&#x27;</span>,</span><br><span class="line">                                      random_state=<span class="number">0</span>,</span><br><span class="line">                                      splitter=<span class="string">&#x27;random&#x27;</span>,</span><br><span class="line">                                      max_depth=i+<span class="number">1</span>  </span><br><span class="line">                                                        )</span><br><span class="line">    clf = clf.fit(Xtrain, Ytrain)</span><br><span class="line">    score = clf.score(Xtest, Ytest)</span><br><span class="line">    test.append(score)</span><br><span class="line">plt.plot(<span class="built_in">range</span>(<span class="number">10</span>), test, color=<span class="string">&#x27;red&#x27;</span>, label=<span class="string">&#x27;max_depth&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><strong>思考：</strong></p>
+<p>剪枝参数一定能够提升模型在测试上的表现嘛？</p>
+]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
       <tags>
         <tag>sklearn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二章：线性表</title>
+    <url>/2021/12/24/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="1-线性表的定义和特点"><a href="#1-线性表的定义和特点" class="headerlink" title="1. 线性表的定义和特点"></a>1. 线性表的定义和特点</h2><h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>就是很简单由n个数据特性相同的元素构成的有限序列称为线性表。</p>
+<h3 id="1-2-特点"><a href="#1-2-特点" class="headerlink" title="1.2 特点"></a>1.2 特点</h3><ol>
+<li>存在<strong>唯一</strong>一个被称作“第一个”的数据元素。</li>
+<li>存在<strong>唯一</strong>的一个被称作“最后一个”的数据元素。</li>
+<li>除了第一个之外，结构中的每个数据元素均只有<strong>一个前驱。</strong></li>
+<li>除了最后一个之外，结构中的每个数据元素只有<strong>一个后继。</strong></li>
+</ol>
+<span id="more"></span>
+
+<h2 id="2-顺序表"><a href="#2-顺序表" class="headerlink" title="2. 顺序表"></a>2. 顺序表</h2><h3 id="2-1-顺序存储表示基本定义"><a href="#2-1-顺序存储表示基本定义" class="headerlink" title="2.1 顺序存储表示基本定义"></a>2.1 顺序存储表示基本定义</h3><p>指得是用一组<strong>地址连续</strong>的存储单元结构依次存储线性表的数据元素。<strong>他们的逻辑上是相邻的，其物理次序也是相邻的。</strong></p>
+<h3 id="2-2-顺序表的代码实现"><a href="#2-2-顺序表的代码实现" class="headerlink" title="2.2 顺序表的代码实现"></a>2.2 顺序表的代码实现</h3><h4 id="2-2-1-线性表的简单操作"><a href="#2-2-1-线性表的简单操作" class="headerlink" title="2.2.1 线性表的简单操作"></a>2.2.1 线性表的简单操作</h4><ol>
+<li><p>线性表的销毁</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DestroyList</span><span class="params">(Sqlist &amp;L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(L.elem) &#123;</span><br><span class="line">        <span class="keyword">delete</span> L.elem;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>清空线性表</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ClearList</span><span class="params">(Sqlist &amp;L)</span> </span>&#123;</span><br><span class="line">    L.length = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>求线性表的长度</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">(Sqlist L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> L.length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>判断线性表L是否为空</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Sqlist L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(L.Length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="2-2-2-算法中预定的常量"><a href="#2-2-2-算法中预定的常量" class="headerlink" title="2.2.2 算法中预定的常量"></a>2.2.2 算法中预定的常量</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFFASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="comment">//Status是函数类型，其值是函数结果状态</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> ElemType; <span class="comment">//char是可以自己更换的</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-3-顺序表L的初始化"><a href="#2-2-3-顺序表L的初始化" class="headerlink" title="2.2.3 顺序表L的初始化"></a>2.2.3 顺序表L的初始化</h4><p>在如下的代码中，if语句是用来判断的，异常值处理。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(Sqlist &amp;L)</span> </span>&#123;</span><br><span class="line">    L.elem = <span class="keyword">new</span> ElemType[MAXSIZE];</span><br><span class="line">    <span class="keyword">if</span>(!L.elem) <span class="built_in">exit</span> (OVERFLOW);</span><br><span class="line">    L.Length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-4-顺序表的取值"><a href="#2-2-4-顺序表的取值" class="headerlink" title="2.2.4 顺序表的取值"></a>2.2.4 顺序表的取值</h4><p><strong>随机存取</strong>，并且时间复杂程度是O(1)，其具体代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">GetElem</span><span class="params">(Sqlist L, <span class="keyword">int</span> L, ElemType &amp;e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.Length) <span class="keyword">return</span> ERROR;</span><br><span class="line">    e = L.elem[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-5-顺序表的查找-按值查找"><a href="#2-2-5-顺序表的查找-按值查找" class="headerlink" title="2.2.5 顺序表的查找(按值查找)"></a>2.2.5 顺序表的查找(按值查找)</h4><ul>
+<li><p>查找算法的实现步骤</p>
+<ol>
+<li>从第一个元素起，依次和e相比较，若找到与e相等的元素，查找成功，返回该元素的序号。</li>
+<li>若查遍整个顺序表都没有找到，则查找失败，返回0。</li>
+</ol>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateElem</span><span class="params">(SqList L, Elemtype e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;L.Length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(L.elemp[i] == e)</span><br><span class="line">            <span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>算法分析</p>
+<p>假如$p_{i}$是查找第$i$个元素的概率，$c_{i}$是找到第$i$个记录需要比较的次数，则在长度为$n$的线性表中，查找成功时的平均查找长度为：  </p>
+<p>​                                                                            $$ ASL=\sum_{i=1}^{n}p_{i}C_{i}$$</p>
+<p>其中如果需要查找的时第一个元素的时候，则只需要比较一次，而查找表中最后一个记录时，则需要比较$n$次，一般情况下$c_{i}=i$。假设每个元素的查找概率相等，即：</p>
+<p>​                                                                            $$p_{i} = \frac{1}{n}$$</p>
+<p>则表达式可以化简为：</p>
+<p>​                                                                            $$ASL=\frac{1}{n}\sum_{i=1}^{n}i=\frac{n+1}{2}$$</p>
+<p>由此可见，顺序表按值查找算法的平均时间复杂程度为O(n)。</p>
+</li>
+</ul>
+<h4 id="2-2-6顺序表的插入"><a href="#2-2-6顺序表的插入" class="headerlink" title="2.2.6顺序表的插入"></a>2.2.6顺序表的插入</h4><ul>
+<li><p>插入的算法步骤</p>
+<ol>
+<li>判断插入位置$i$是否合法($i$值的合法范围是($1\leq i \leq n+1$))，若不合法，则返回ERROR。</li>
+<li>判断顺序表的存储空间是否已满，若满则返回ERROR。</li>
+<li>将第$n$个至第$i$个位置的元素，依次向后移动一个位置，空出第$i$个位置($i=n+1$时，无需移动)。</li>
+<li>将要插入的新元素$e$放入第$i$个位置。</li>
+<li>表长加1。</li>
+</ol>
+</li>
+<li><p>插入代码的具体实现</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListInsert_Sq</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> i, Elemtype e)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// i值的合法性</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L.Length) <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="comment">// 当前存储空间已满</span></span><br><span class="line">    <span class="keyword">if</span>(L.Length == MAXSIZE) <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="comment">// 插入位置及之后的元素后移(从n开始)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = L.Length; j&gt;=i<span class="number">-1</span>; j--) &#123;</span><br><span class="line">        L.elem[j+<span class="number">1</span>] = L.elem[j];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将新元素放入第i个位置</span></span><br><span class="line">    L.elem[i<span class="number">-1</span>] = e;</span><br><span class="line">    <span class="comment">// 表长加一</span></span><br><span class="line">    L.Length++;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>算法分析</p>
+<p>假设$p_{i}$是第$i$个元素之前插入一个元素的概率，$E_{ins}$为在长度为$n$的线性表中插入一个元素时，所需要移动元素的次数的期望值(平均次数)，则有：</p>
+<p>​                                                                    $$E_{ins} = \sum_{i=1}^{n+1}p_{i}(n-i+1)$$</p>
+<p>为了一般性，可以设置在线性表的任何位置上插入元素都是等概率的，即：</p>
+<p>​                                                                    $$p_{i} = \frac{i}{n+1}$$</p>
+<p>则原式可以简化为：</p>
+<p>​                                                                    $$E_{ins}=\frac{1}{n+1}\sum_{i=1}^{n+1}(n-i+1)=\frac{n}{2}$$</p>
+<p>综上，顺序表的插入算法的时间平均复杂度为O(n)。</p>
+</li>
+</ul>
+<h4 id="2-2-7-顺序表的删除"><a href="#2-2-7-顺序表的删除" class="headerlink" title="2.2.7 顺序表的删除"></a>2.2.7 顺序表的删除</h4><ul>
+<li><p>删除算法的步骤</p>
+<ol>
+<li>判断要删除的位置是否合法($1\leq i \leq n$)。</li>
+<li>将第i+1个至第n个的元素依次向前移动一个位置(i=n时，无需移动)。</li>
+<li>表长减1</li>
+</ol>
+</li>
+<li><p>删除算法的具体实现</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListDelete_Sq</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 判断i值合法程度</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L.Length) <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;L.Length<span class="number">-1</span>; j++) &#123;</span><br><span class="line">        L.elem[j<span class="number">-1</span>] = L.elem[j];</span><br><span class="line">    &#125;</span><br><span class="line">    L.Length--;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>算法分析</p>
+<p>假设$p_i$是删除第$i$个元素的概率，则$E_{del}$为长度为$n$的线性表中删除一个元素时所需要移动元素次数的期望值(平均次数)，则有</p>
+<p>​                                                                        $$E_{del} = \sum_{i=1}^{n}p_{i}(n-i)$$</p>
+<p>为了保证一般性，假设任何位置被删除的概率都是相等的，即：</p>
+<p>​                                                                        $$p_{j}=\frac{1}{n}$$</p>
+<p>所以原式可以化简为：</p>
+<p>​                                                                        $$E_{del} = \frac{1}{n}\sum_{i=1}^{n}(n-i)=\frac{n-1}{2}$$</p>
+<p>综上所述：顺序表删除的平均算法时间复杂程度为O(n)。</p>
+</li>
+</ul>
+<h3 id="2-3-顺序表的优缺点"><a href="#2-3-顺序表的优缺点" class="headerlink" title="2.3 顺序表的优缺点"></a>2.3 顺序表的优缺点</h3><ol>
+<li><p>优点</p>
+<ul>
+<li><p>存储密度大</p>
+</li>
+<li><p>可以随机存取表中任意元素(知道地址和索引后，直接访问)</p>
+</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>在插入、删除某一元素时，需要大量移动元素</li>
+<li>浪费存储空间</li>
+<li>属于静态存储形式，数据元素的个数不能自由扩充</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-4-顺序表的特点"><a href="#2-4-顺序表的特点" class="headerlink" title="2.4 顺序表的特点"></a>2.4 顺序表的特点</h3><p>简单来说就是逻辑关系相邻的数据，他们的存储也是相邻的。</p>
+<ul>
+<li>特点<ol>
+<li>地址连续</li>
+<li>依次存放</li>
+<li>随机存取</li>
+<li>类型相同</li>
+</ol>
+</li>
+</ul>
+<p>我们可以发现，其特点和数据很像，但是表长可变，数组长度不可动态定义。</p>
+<h2 id="3-链表"><a href="#3-链表" class="headerlink" title="3. 链表"></a>3. 链表</h2><h3 id="3-1-单链表中的相关定义"><a href="#3-1-单链表中的相关定义" class="headerlink" title="3.1 单链表中的相关定义"></a>3.1 单链表中的相关定义</h3><ol>
+<li>结点：存储直接后继位置的域成为<strong>指针域</strong>。指针域中存储的信息成为<strong>指针</strong>或<strong>链。</strong>其中存储数据元素信息的域称为<strong>数据域</strong>。</li>
+<li>首元结点：是指链表中存储第一个数据元素$a_{1}$的结点。</li>
+<li>头指针：是指向链表中<strong>第一个结点</strong>的指针。若链表设有头结点，则头指针所指向结点为线性表的<strong>头结点</strong>；若不设头结点，则头指针所指向结点为该线性表的<strong>首元结点</strong>。它存储的是头结点的地址或者首元结点的地址。</li>
+<li>头结点：是指在首元结点之前附设一个结点，其指针域指向<strong>首元结点</strong>，头结点的数据域可以不存储任何信息，也可以存储对链表的其他的附加信息。</li>
+<li>其他链表：<ul>
+<li>单链表：结点只有一个指针域的链表</li>
+<li>双链表：结点有两个指针域的链表</li>
+<li>循环链表：首尾相接的链表</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-2-单链表的代码实现"><a href="#3-2-单链表的代码实现" class="headerlink" title="3.2 单链表的代码实现"></a>3.2 单链表的代码实现</h3>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一章：基础导论</title>
+    <url>/2021/12/24/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E5%AF%BC%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><h3 id="1-1-数据"><a href="#1-1-数据" class="headerlink" title="1.1 数据"></a>1.1 数据</h3><p><strong>数据</strong>是客观事物的符号表示，是所有能输入到计算机并且被计算机程序所处理的符号的总称。</p>
+<h3 id="1-2-数据项"><a href="#1-2-数据项" class="headerlink" title="1.2 数据项"></a>1.2 数据项</h3><p>数据项是组成数据元素有<strong>独立含义的、不可分割的最小单位。</strong></p>
+<h3 id="1-3-数据元素"><a href="#1-3-数据元素" class="headerlink" title="1.3 数据元素"></a>1.3 数据元素</h3><p>数据元素是数据的<strong>基本单位</strong>，在计算机中通常作为一个整体考虑。</p>
+<h3 id="1-4-数据对象"><a href="#1-4-数据对象" class="headerlink" title="1.4 数据对象"></a>1.4 数据对象</h3><p>数据对象是<strong>性质相同的数据元素的集合</strong>，是数据的一个子集。</p>
+<span id="more"></span>
+
+
+
+<h2 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2. 数据结构"></a>2. 数据结构</h2><p>数据结构是相互之间存在一种或者多种特定关系的数据元素的集合，也就是说数据是带“结构”的数据元素的集合，“结构”则指数据元素之间的关系。</p>
+<h3 id="2-1-逻辑结构"><a href="#2-1-逻辑结构" class="headerlink" title="2.1 逻辑结构"></a>2.1 逻辑结构</h3><ul>
+<li>基本概念：数据的逻辑结构是从逻辑关系上描述数据的，它与数据的存储位置无关，是独立于计算机的。</li>
+<li>两个元素：一个是<strong>数据元素</strong>和<strong>关系。</strong></li>
+</ul>
+<h4 id="2-1-1-线性结构"><a href="#2-1-1-线性结构" class="headerlink" title="2.1.1 线性结构"></a>2.1.1 线性结构</h4><p>也就是数据元素之前存在<strong>一对一</strong>的关系。</p>
+<h4 id="2-1-2-非线性结构"><a href="#2-1-2-非线性结构" class="headerlink" title="2.1.2 非线性结构"></a>2.1.2 非线性结构</h4><ol>
+<li>集合结构：数据元素之间除了<strong>属于同一集合</strong>的关系外，没有其他关系了。</li>
+<li>树结构：数据元素之间存在<strong>一对多</strong>的关系。</li>
+<li>图结构：数据元素之间存在<strong>多对多</strong>的关系。</li>
+</ol>
+<h3 id="2-2-存储结构"><a href="#2-2-存储结构" class="headerlink" title="2.2 存储结构"></a>2.2 存储结构</h3><h4 id="2-2-1-顺序存储结构"><a href="#2-2-1-顺序存储结构" class="headerlink" title="2.2.1 顺序存储结构"></a>2.2.1 顺序存储结构</h4><p>顺序存储结构是借助元素在存储器中的<strong>相对位置</strong>来表示数据元素之间的逻辑关系，通常借助数据语言中的<strong>数组</strong>类型来描述。</p>
+<h4 id="2-2-2-链式存储结构"><a href="#2-2-2-链式存储结构" class="headerlink" title="2.2.2 链式存储结构"></a>2.2.2 链式存储结构</h4><p>跟顺序存储结构相比，它在存储器中的存储发生了改变，不再连续了。为了表示结点之间的关系，还要给每个节点附加指针字段，用于存放后继元素的地址。</p>
+<h2 id="3-算法与算法分析"><a href="#3-算法与算法分析" class="headerlink" title="3. 算法与算法分析"></a>3. 算法与算法分析</h2>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第七章：数据库设计</title>
+    <url>/2021/12/07/%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="数据库设计的基本步骤"><a href="#数据库设计的基本步骤" class="headerlink" title="数据库设计的基本步骤"></a>数据库设计的基本步骤</h1><ol>
+<li>需求分析</li>
+<li>概念结构设计    ER图或者是设计数据字典</li>
+<li>逻辑结构设计    把ER图转为逻辑模型</li>
+<li>物理结构设计    把逻辑模型转为物理模型</li>
+<li>数据库实验      写SQL代码</li>
+<li>数据库运行维护   性能检测<span id="more"></span>
+<h1 id="ER图"><a href="#ER图" class="headerlink" title="ER图"></a>ER图</h1></li>
+<li>实体是长方形</li>
+<li>而属性是椭圆形</li>
+<li>关系为菱形</li>
+<li>1对1(1:1)：1对1关系是指对于实体集与实体集B，A中的每一个实体至多与B中一个实体有关系。</li>
+<li>1对多(1:N)：1对多关系是指实体集A与实体集B中至少有N个实体有关系，并且实体集B中每一个实体至多与实体集A中一个实体有关系。</li>
+<li>多对多(N:M)：多对多关系是指实体集A中的每一个实体与实体集B中至少M个实体有关系，并且实体集B中每一个实体与实体集A中至少N个实体有关系。</li>
+</ol>
+<h1 id="ER图转为关系模式"><a href="#ER图转为关系模式" class="headerlink" title="ER图转为关系模式"></a>ER图转为关系模式</h1><ol>
+<li>1:1要把关系合并到任意一个表中，并且把另外的表里面的主键放到另一个表中。</li>
+<li>1:n要把A(1)的主码放到B(n)里面，然后把关系的属性放到B(n)里面。</li>
+<li>m:n要把两边实体的主键和自身的属性，单独作为一个关系模式。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第六章：关系数据库理论</title>
+    <url>/2021/12/07/%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA/</url>
+    <content><![CDATA[<p><strong>为什么要引入范式？</strong></p>
+<ol>
+<li>数据冗余</li>
+<li>更新异常</li>
+<li>插入异常</li>
+<li>删除异常<span id="more"></span></li>
+</ol>
+<p><strong>范式分类</strong></p>
+<blockquote>
+<p>设计关系数据库的时候，遵从不同的规范要求，这些不同的规范要求被称为不同的范式，各种范式呈递次范式，越高的范式，数据库冗余越小。<br>目关系数据库有六种范式：第一范式(1NF)、第二范式(2NF)、第三范式(3NF)、巴斯-科德范式(BCNF)、第四范式(4NF)和第五范式(5NF，也称为完美范式)。</p>
+</blockquote>
+<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ol>
+<li><p><strong>非平凡函数依赖</strong></p>
+<blockquote>
+<p>x-&gt;y，但y不属于x，则称x-&gt;y是非平凡的函数依赖。<br> 也就是说，你是来蹭课的，上课的时候能看见你，但是其实你不属于上这个课的人。</p>
+</blockquote>
+</li>
+<li><p><strong>平凡函数依赖</strong></p>
+<blockquote>
+<p>x-&gt;y，y属于x，则称x-&gt;y是平凡的函数依赖。<br> 你的班级能够找到你，而且你也是这个班级的。</p>
+</blockquote>
+</li>
+<li><p><strong>完全函数依赖</strong></p>
+<blockquote>
+<p>定义略。如果X集合能够刚好推出Y来，但是X的真子集就不行。也就是说，如果X集合中少任何一个元素的话，都不能推出Y来。</p>
+</blockquote>
+</li>
+<li><p><strong>部分函数依赖</strong></p>
+<blockquote>
+<p>定义略。就像学号能推出姓名，学号和身份证号一起也能推出姓名，如果去掉身份证号也没有影响。</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="候选码"><a href="#候选码" class="headerlink" title="候选码"></a>候选码</h1><blockquote>
+<p>概念：能够推出所有的属性</p>
+</blockquote>
+<h2 id="如何选出候选码？"><a href="#如何选出候选码？" class="headerlink" title="如何选出候选码？"></a>如何选出候选码？</h2><ol>
+<li>只出现在左边的一定是候选码</li>
+<li>只出现在右边的一定不是候选码</li>
+<li>左右都出现的不一定是候选码</li>
+<li>左右都不出现的一定是候选码</li>
+<li>再求确定的候选码的闭包，如果可以推出全部，那么当前确定的就是候选码，否则你要把每一个可能的值放进当前确定的候选码里面求闭包</li>
+</ol>
+<p>例如：R&lt;U, F&gt;, U&lt;A, B, C, D, E, G&gt;是属性集合, F=(AB-&gt;C, CD-&gt;E, E-&gt;A, A-&gt;G)是映射，求候选码：</p>
+<blockquote>
+<p>解：我们可以的知：<br>一定是候选码：B、D<br>一定不是候选码：G<br>不一定是候选码：A、C、E<br>BD啥也推不出来，所以要把每一个不一定都放进去测试<br>(BDA)+ = 可推出：C、E、G   所以可以推出ABCDEG<br>(BDC)+ = 可推出：E、A、G   所以可以推出ABCDEG<br>(BDE)+ = 可推出：A、G、C   所以可以推出ABCDEG<br>综上所述，候选码是{(BDA),(BDC),(BDE)};</p>
+</blockquote>
+<h2 id="一些其他的概念"><a href="#一些其他的概念" class="headerlink" title="一些其他的概念"></a>一些其他的概念</h2><ol>
+<li>超码：能表示出所有属性的集合，比如(BDA), (BDC), (BDE), BDCA, BDEA, ABCDE。候选码是最小的超码。</li>
+<li>主码：从候选码里面任意选出一个作为主码。</li>
+<li>主属性：包含在所有候选码的属性，比如ABCDE</li>
+<li>非主属性：不包含在候选码中的属性，比如G</li>
+<li>全码：所有的属性都是主码</li>
+</ol>
+<h2 id="三大范式"><a href="#三大范式" class="headerlink" title="三大范式"></a>三大范式</h2><ol>
+<li>1NF<blockquote>
+<p>所有字段值都是不可以分解的原子值<br>比如某些系统需要”地址”这个属性，本来讲地址设置为一个数据表的字段就行，但是如果系统经常会访问”地址”属性中”城市”的部分，那么就非要讲”地址”这个属性值重新拆分为省份、城市、详细地址等多个部分进行存储，这样在对地址中某一部分操作的时候会很方便。</p>
+</blockquote>
+</li>
+<li>2NF<blockquote>
+<p>不包含非主属性对码的部分函数依赖，一个表只能保存一种数据，不可以把多种数据保存在同一张数据库表中。</p>
+</blockquote>
+</li>
+<li>3NF<blockquote>
+<p>不包含非主属性对码的传递函数依赖，确保数据表中的每一列数据都和主键直接相关，而不能间接相关。</p>
+</blockquote>
+</li>
+<li>BCNF<blockquote>
+<p>消除每一属性对候选键的传递依赖，BCNF是修正的第三范式。</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="求最小的函数依赖集"><a href="#求最小的函数依赖集" class="headerlink" title="求最小的函数依赖集"></a>求最小的函数依赖集</h1><p> <strong>什么是依赖？</strong></p>
+<blockquote>
+<p>依赖是指关系中一个或一组属性的值可以决定其他属性的值，比如A-&gt;B就是一个依赖。</p>
+</blockquote>
+<p> <strong>如何求最小依赖？</strong></p>
+<ol>
+<li>拆右边为多个元素，比如A-&gt;BC拆为A-&gt;B和A-&gt;C</li>
+<li>除去当前元素，求它的闭包，把集合里面的元素全部都用完。看看能不能推出当前元素的右端值，可以就不要，不可以就保留。</li>
+<li>左边最小化(通过遮住元素看看能不能推出其他的元素)，比如BCD，遮住B，看CD能不能推出B来，如果不能则B就保留，否则就去掉。C和D同理。</li>
+</ol>
+<p><strong>例题</strong>：已知关系R&lt;U, F&gt;, U{A,B,C,D,E,F,G}, F={BCD-&gt;A, BC-&gt;E, A-&gt;F, F-&gt;G, C-&gt;D, A-&gt;G}求F的最小依赖                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </p>
+<blockquote>
+<p><strong>解</strong>：右边没有可以拆分的。<br>    除去BCD这个元素，(BCD)+ =BCDE，发现没有其他元素可以推出A来，保留。<br>    除去BC这个元素，(BC)+ = BCD，其他元素推不出E，保留。<br>    除去A这个元素，(A)+ = AG，其他元素推不出F，保留。<br>    除去F这个元素，(F)+ = F，其他元素推不出G，保留。<br>    除去C这个元素，(C)+ = D，其他元素推不出D来，保留。<br>    除去A这个元素，(A)+ = FG，可以推出G来，去掉。<br>    然后再把左边多的元素看看能不能拆开，BCD，遮住B，CD并不能推出B，同理，不能推出C，但是D可以被推出，所以BCD变成BD。<br>    综上所述：最小依赖为{BC-&gt;A, BC-&gt;E, A-&gt;F, F-&gt;G, C-&gt;D}</p>
+</blockquote>
+<h2 id="模式分解"><a href="#模式分解" class="headerlink" title="模式分解"></a>模式分解</h2><ol>
+<li>准则：无损连接和保持函数依赖。</li>
+<li>无损：就是分解后再次连接，和分解之前一样。</li>
+<li>依赖：依赖不变。</li>
+</ol>
+<p><strong>例题</strong>：一直R{ABCDEGH}, F={A-&gt;D,E-&gt;D,D-&gt;B,BC-&gt;D,DC-&gt;A}，求保持函数依赖的3NF的分解。</p>
+<ol>
+<li>求出最小函数依赖集</li>
+<li>把不在F里面的属性都找出来，单独分成一类</li>
+<li>把每一个依赖左边相同的分为一类，没有一样的，那就把A-&gt;D改成{AD}，如果一样{A-&gt;B, A-&gt;C} 那么就改为{ABC}</li>
+<li>如果候选码没出现在分离(最小依赖集)里面，把任意一个候选码作为一类。<blockquote>
+<p><strong>解</strong>：最小函数依赖集为：Fmin={A-&gt;D,E-&gt;D,D-&gt;B,BC-&gt;D,DC-&gt;A}。<br>GH不在里面，所以单独分为一类{GH}<br>候选码：CE<br>{AD}{ED}{DB}{BCD}{DCA}{CE}{GH}</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第五章：数据库完整性</title>
+    <url>/2021/12/07/%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="数据完整性概述"><a href="#数据完整性概述" class="headerlink" title="数据完整性概述"></a>数据完整性概述</h1><h2 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h2><blockquote>
+<p>符合现实世界的描述</p>
+</blockquote>
+<h2 id="相容性"><a href="#相容性" class="headerlink" title="相容性"></a>相容性</h2><blockquote>
+<p>同一对象在不同表里面是符合逻辑的。比如我的地址、年龄，在两个表里面应该是一样的</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="维护完整性"><a href="#维护完整性" class="headerlink" title="维护完整性"></a>维护完整性</h2><ol>
+<li>提供定义完整性约束条件的机制</li>
+<li>提供完整性检查的方法</li>
+<li>进行违约处理</li>
+</ol>
+<h1 id="三大完整性"><a href="#三大完整性" class="headerlink" title="三大完整性"></a>三大完整性</h1><h2 id="实体完整性"><a href="#实体完整性" class="headerlink" title="实体完整性"></a>实体完整性</h2><blockquote>
+<p>主码唯一，且非空</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    <span class="keyword">primary</span> key(id));</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">primary</span> key, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="参照完整性"><a href="#参照完整性" class="headerlink" title="参照完整性"></a>参照完整性</h2><blockquote>
+<p>外码要么有，要么只有一个</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">    id <span class="type">int</span>, </span><br><span class="line">    <span class="type">time</span> <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    title <span class="type">varchar</span>(<span class="number">255</span>), </span><br><span class="line">    teacher_id <span class="type">int</span>, </span><br><span class="line">    <span class="keyword">primary</span> key(id), </span><br><span class="line">    <span class="keyword">foreign</span> key(id) <span class="keyword">references</span> course_description(course_id));</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户定义完整性"><a href="#用户定义完整性" class="headerlink" title="用户定义完整性"></a>用户定义完整性</h2><ol>
+<li>非空<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure></li>
+<li>列值唯一<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">unique</span>);</span><br></pre></td></tr></table></figure></li>
+<li>满足某个条件表达式 check来写<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">     <span class="keyword">no</span> <span class="type">char</span>(<span class="number">9</span>) <span class="keyword">primary</span> key,</span><br><span class="line">     sex <span class="type">char</span>(<span class="number">2</span>) <span class="keyword">check</span>(sex <span class="keyword">in</span> (<span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;女&#x27;</span>)),</span><br><span class="line">     age <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1><blockquote>
+<p>断言创建以后，任何对断言中涉及关系的操作都会触发关系数据库系统对断言的检查，任何使断言不为真值的操作都会被拒绝执行。</p>
+</blockquote>
+<p>其sql语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> assertion <span class="operator">&lt;</span>断言名<span class="operator">&gt;</span> <span class="operator">&lt;</span><span class="keyword">check</span> 子句<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+<p>例如：限制每一门课程最多有60名学生选修</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> assertion asse_sc_cnum1</span><br><span class="line"><span class="keyword">check</span>(<span class="number">60</span> <span class="operator">&gt;=</span> <span class="keyword">all</span>(<span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)</span><br><span class="line">                <span class="keyword">from</span> sc</span><br><span class="line">                <span class="keyword">group</span> <span class="keyword">by</span> cno)</span><br><span class="line">                );</span><br></pre></td></tr></table></figure>
+<p>删除断言名称：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> assertion <span class="operator">&lt;</span>断言名<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h1><blockquote>
+<p>触发器也叫做：事件-&gt;条件-&gt;动作 规则。也就是说事件在某个条件满足的时，会触发某个规则。是一段程序，可以在特定的时刻被自动触发执行。</p>
+</blockquote>
+<p>其sql语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> <span class="operator">&lt;</span>触发器名<span class="operator">&gt;</span>   <span class="comment">/*每当触发事件发生时，该触发器被激活*/</span></span><br><span class="line">&#123;before<span class="operator">|</span>after&#125; <span class="operator">&lt;</span>触发事件<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="operator">&lt;</span>表面<span class="operator">&gt;</span>   <span class="comment">/*指明触发器激活的时间是在执行触发事件前或后*/</span></span><br><span class="line"><span class="keyword">referencing</span> <span class="keyword">new</span><span class="operator">|</span><span class="keyword">old</span> <span class="type">row</span> <span class="keyword">as</span> <span class="operator">&lt;</span>变量<span class="operator">&gt;</span>   <span class="comment">/*referencing指出引用的变量*/</span></span><br><span class="line"><span class="keyword">for</span> <span class="keyword">each</span>&#123;<span class="type">row</span><span class="operator">|</span>statement&#125;     <span class="comment">/*定义触发器的类型，指明动作体执行的频率*/</span></span><br><span class="line">[<span class="keyword">when</span> <span class="operator">&lt;</span>触发条件<span class="operator">&gt;</span>] <span class="operator">&lt;</span>触发动作体<span class="operator">&gt;</span>   <span class="comment">/*仅当触发条件为真时才执行触发动作体*/</span> </span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第四章：数据库安全性概述</title>
+    <url>/2021/12/07/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="数据库安全性概述"><a href="#数据库安全性概述" class="headerlink" title="数据库安全性概述"></a>数据库安全性概述</h1><blockquote>
+<p>是指保护数据库以防止不合法使用所造成的数据泄露、更改或者破坏。</p>
+</blockquote>
+<h2 id="不安全因素"><a href="#不安全因素" class="headerlink" title="不安全因素"></a>不安全因素</h2><ol>
+<li>非授权用户对数据库的恶意存取和破坏</li>
+<li>数据库中重要或敏感的数据被泄露</li>
+<li>安全环境的脆弱性<span id="more"></span>
+<h2 id="自主存取控制方法"><a href="#自主存取控制方法" class="headerlink" title="自主存取控制方法"></a>自主存取控制方法</h2><blockquote>
+<p>主要是通过对用户进行授予或收回对数据的操作权限。</p>
+</blockquote>
+</li>
+<li>grant、revoke<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">to</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span>；</span><br><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> <span class="keyword">on</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">from</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span>；</span><br></pre></td></tr></table></figure></li>
+<li>创建用户<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span><span class="operator">&lt;</span>username<span class="operator">&gt;</span> <span class="keyword">with</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="安全性控制"><a href="#安全性控制" class="headerlink" title="安全性控制"></a>安全性控制</h1><ol>
+<li>用户身份识别：<ol>
+<li>静态口令识别</li>
+<li>动态口令识别</li>
+<li>生物特征识别</li>
+<li>智能卡识别</li>
+</ol>
+</li>
+<li>存储控制</li>
+<li><strong>自主存取控制方法</strong>：<blockquote>
+<p>字面意思就是我们用户可以定义和分配其他用户的操作权限。主要通过grant、revoke来惊喜控制。由两个元素构成：数据对象和操作权限。我们定义用户的存取权限称为授权。</p>
+</blockquote>
+ 主要存取方式<table>
+<thead>
+<tr>
+<th>对象类型</th>
+<th>对象</th>
+<th>操作类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据库模式</td>
+<td>模式</td>
+<td>create schema</td>
+</tr>
+<tr>
+<td>数据库模式</td>
+<td>基本表</td>
+<td>create table、alter table</td>
+</tr>
+<tr>
+<td>数据库模式</td>
+<td>视图</td>
+<td>create view</td>
+</tr>
+<tr>
+<td>数据库模式</td>
+<td>索引</td>
+<td>create index</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>基本表和视图</td>
+<td>select、insert、update、delete、references、all privileges</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>属性列</td>
+<td>select、insert、update、references、all privileges</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>references权限代表是否允许创建外键、all privileges代表所有权限。</strong></em></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li>授权 grant<blockquote>
+<p>授权命令是由数据库管理员使用的，若给用户分配权限时使用with grant option语句，则普通用户获权后，可以把自己的权限授予其他人。</p>
+</blockquote>
+其基本语法如下：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>[(属性名)] [,<span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="operator">&gt;</span>]...</span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">grant</span> option];</span><br></pre></td></tr></table></figure></li>
+<li>回收权利<br>其基本语法如下：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>[(属性名)] [,<span class="operator">&lt;</span>对象名<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>用户<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="operator">&gt;</span>]...[cascade<span class="operator">|</span>restrict];</span><br></pre></td></tr></table></figure></li>
+<li>数据库角色<blockquote>
+<p>角色就是一类人，比如CEO、总监、普通员工等等，可以给这一类人授权。</p>
+</blockquote>
+<ol>
+<li>角色的创建<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> role <span class="operator">&lt;</span>角色名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>给角色授权<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span><span class="operator">&lt;</span>对象名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>角色<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="operator">&gt;</span>]...</span><br></pre></td></tr></table></figure></li>
+<li>将一个角色授予其他的角色或用户<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="operator">&lt;</span>角色<span class="number">1</span><span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="number">2</span><span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">to</span> <span class="operator">&lt;</span>角色<span class="number">3</span><span class="operator">&gt;</span> [,<span class="operator">&lt;</span>用户<span class="number">1</span><span class="operator">&gt;</span>]...</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+<em><strong>角色3获得的是角色1与角色2权限的总和。</strong></em></li>
+<li>角色权限的回收<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> <span class="operator">&lt;</span>权限<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>权限<span class="operator">&gt;</span>]...</span><br><span class="line"><span class="keyword">on</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span><span class="operator">&lt;</span>对象名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>角色<span class="operator">&gt;</span> [,<span class="operator">&lt;</span>角色<span class="operator">&gt;</span>]...</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+<h1 id="视图机制"><a href="#视图机制" class="headerlink" title="视图机制"></a>视图机制</h1><blockquote>
+<p>就是为不同用户定义不同的视图，把不需要的数据隐藏起来，这样的话用户就不会瞎操作了。</p>
+</blockquote>
+<h1 id="审计"><a href="#审计" class="headerlink" title="审计"></a>审计</h1><blockquote>
+<p>把对数据库的所有操作都记录到审计日志中，然后可以通过日志审查这个里面是否有一些违法的行为</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 对修改sc表结构或修改sc表数据的操作进行审计</span></span><br><span class="line"><span class="comment">audit alter, update on sc;</span></span><br><span class="line"><span class="comment">/* 取消对sc表的审计</span></span><br><span class="line"><span class="comment">noaudit alter, update on sc;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第三章：关系数据库标准sql语句</title>
+    <url>/2021/12/06/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86sql%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<h1 id="SQL语言的功能概述"><a href="#SQL语言的功能概述" class="headerlink" title="SQL语言的功能概述"></a>SQL语言的功能概述</h1><h2 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h2><h3 id="模式的定义与删除"><a href="#模式的定义与删除" class="headerlink" title="模式的定义与删除"></a>模式的定义与删除</h3><ol>
+<li><strong>模式定义</strong>：在sql中，模式定义语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> schema <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="keyword">authorization</span> <span class="operator">&lt;</span>用户名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+ 实际上就相当于定义了一个框架，然后再去这个框架里面进一步创建基本表、视图、定义授权等等。  </li>
+</ol>
+ <span id="more"></span>
+<ol start="2">
+<li><strong>模式删除</strong>：在sql中，模式删除语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> schema <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="operator">&lt;</span>cascade<span class="operator">|</span>restrict<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+ <em><strong>注意：选择前者的话，就是说删除模式的同时，也把该模式中所有数据库对象全部删除。选择后者的话，如果该模式中已经定义了下属的数据对象，则就拒绝该操作，该模式没有任何下属的对象才可以删除。</strong></em></li>
+</ol>
+<h3 id="基本表的定义、删除、与修改"><a href="#基本表的定义、删除、与修改" class="headerlink" title="基本表的定义、删除、与修改"></a>基本表的定义、删除、与修改</h3><ol>
+<li><strong>表的定义</strong>：在sql中，表的定义语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>[具体要求]</span><br></pre></td></tr></table></figure></li>
+<li><strong>表的删除</strong>：在sql中，表的删除语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> [cascade<span class="operator">|</span>restrict]</span><br></pre></td></tr></table></figure></li>
+<li><strong>表的修改</strong>：在sql中，表中的修改语句如下： <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>[具体要求]</span><br></pre></td></tr></table></figure>
+ <em><strong>注意：这些操作都是对表的属性什么的来操作，比如增加属性呀什么的，跟update处理数据要区分开。</strong></em></li>
+</ol>
+<h3 id="索引的建立与删除"><a href="#索引的建立与删除" class="headerlink" title="索引的建立与删除"></a>索引的建立与删除</h3><blockquote>
+<p>当表的数据量比较大的时候，查询会比较耗时，索引建立索引来帮助快速查询数据。</p>
+</blockquote>
+<hr>
+<h2 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h2><p>在sql中，数据查询的语句为：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">&lt;</span>目标或者表达式<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>表名或者视图名<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span> <span class="operator">&lt;</span>条件表达式或者子查询<span class="operator">&gt;</span>]</span><br><span class="line">[<span class="keyword">group</span> <span class="keyword">by</span> <span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;</span> [<span class="keyword">having</span> <span class="operator">&lt;</span>条件表达式<span class="operator">&gt;</span>]]</span><br><span class="line">[<span class="keyword">order</span> <span class="keyword">by</span> <span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;</span> [<span class="keyword">ASC</span><span class="operator">|</span><span class="keyword">DESC</span>]];</span><br></pre></td></tr></table></figure>
+<p><em><strong>注意：having与where作用的对象不同，having操作的对象是组，而where操作的对象是每一个元组。order by只能对最终结果排序。</strong></em></p>
+<h3 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h3><ol>
+<li><p>消除取值重复的行，这个需要用到distinct关键字，会把重复的元素给删除掉。这种情况一般用于查询学生人数什么的，跟多个属性挂钩的情况。如下例，查询选修了课程的学生的学号：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> sno</span><br><span class="line"><span class="keyword">from</span> sc;</span><br></pre></td></tr></table></figure></li>
+<li><p>查询满足条件的元组，通常使用where和比较运算符。</p>
+</li>
+<li><p>确定数据的范围，这个是使用的是between关键字，如下例，查询年龄在20-23岁(包括20和23)之间学生的姓名、系别、年龄：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> snake, sdept, sage</span><br><span class="line"><span class="keyword">from</span> student</span><br><span class="line"><span class="keyword">where</span> sage <span class="keyword">between</span> <span class="number">20</span> <span class="keyword">and</span> <span class="number">23</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>确定集合，这个是使用谓词IN，可以用来查找属性值属于制定集合的元组。</p>
+</li>
+<li><p>字符匹配，用的关键字是like，%是匹配任意长度的字符串，_是匹配任意单个字符。</p>
+</li>
+<li><p>对最后的结果进行排序，用的是order by语句，可以接一个或者多个属性列。asc是降序、desc是升序。</p>
+</li>
+<li><p>聚集函数，只需要注意，<strong>where子句是不能够用聚集函数作为条件表达式的。聚集函数只能用于select子句和group by中的having字句。</strong></p>
+</li>
+<li><p>group by子句，是讲查询结构按某一列或者多列的值分组，值相等的分为一组。分组后聚集函数讲作用于每一个组，即每一个组都有一个函数值，</p>
+</li>
+<li><p>相关子查询：如果子查询的条件依赖于父查询，这类子查询称为相关子查询。不相关子查询：子查询条件是不依赖于父查询的。</p>
+</li>
+<li><p>any和all</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>=</th>
+<th>!=</th>
+<th>&lt;</th>
+<th>&lt;=</th>
+<th>&gt;</th>
+<th>&gt;=</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>any</td>
+<td>in</td>
+<td>–</td>
+<td>&lt;max</td>
+<td>&lt;=max</td>
+<td>&gt;min</td>
+<td>&gt;=min</td>
+</tr>
+<tr>
+<td>all</td>
+<td>–</td>
+<td>not in</td>
+<td>&lt;min</td>
+<td>&lt;=min</td>
+<td>&gt;max</td>
+<td>&gt;=max</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h2><blockquote>
+<p>数据更细的操作有三种：向表中添加若干行数据、修改表中的数据和删除表中的若干行数据。</p>
+</blockquote>
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><ol>
+<li>插入一个元组，基本语法：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span></span><br><span class="line"><span class="keyword">into</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>[列名]</span><br><span class="line"><span class="keyword">values</span>(<span class="operator">&lt;</span>常量<span class="operator">&gt;</span>、...)</span><br></pre></td></tr></table></figure>
+没什么具体要求，就是要注意字符串是单引号就行。</li>
+<li>插入子查询(批量元素的插入)，类似于上述表达式，先执行子查询，然后把子查询的结果再插入到表中。</li>
+</ol>
+<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><p>语句的一般格式为：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">set</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;=</span><span class="operator">&lt;</span>表达式<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span><span class="operator">&lt;</span>条件<span class="operator">&gt;</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>删除语句的一般格式为：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span>]</span><br></pre></td></tr></table></figure>
+<p>delete跟那个alter不一样，这个是删除的数据，而不是表的定义，注意区分开。</p>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><blockquote>
+<p>视图是从一个或者几个基本表(或视图)导出的表。它与基本表不同，是一个虚表。数据库中只存放数据的定义，而不存放视图对应的数据，这些数据任然被放在基本表中。一旦基本表发生改变，视图也会发生改变。就像是一个窗户，透过它可以看到数据中自己感兴趣的数据以及变化。</p>
+</blockquote>
+<h3 id="定义视图"><a href="#定义视图" class="headerlink" title="定义视图"></a>定义视图</h3><p>其一般格式为：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span><span class="operator">&lt;</span>视图名<span class="operator">&gt;</span> [(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span>)...]</span><br><span class="line"><span class="keyword">as</span> <span class="operator">&lt;</span>子查询<span class="operator">&gt;</span></span><br><span class="line">[<span class="keyword">with</span> <span class="keyword">check</span> option];</span><br></pre></td></tr></table></figure>
+<p>子查询可以是任意的select语句，是否可以含有order by子句和distinct短语由具体系统的实现。<br><em><strong>只是把视图的定义存入数据字典，并不执行其中的select语句</strong></em>。</p>
+<p>行列子集视图：去掉了基本表其他的某些行和某些列，只保留了主码。<br>分组视图：带有聚集函数和group by子句的查询来定义视图。<br><em><strong>并不是所有视图都是可更新的</strong></em></p>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二章：关系数据库</title>
+    <url>/2021/12/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="第二章：关系数据库"><a href="#第二章：关系数据库" class="headerlink" title="第二章：关系数据库"></a>第二章：关系数据库</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>略</p>
+<h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><blockquote>
+<p>通常包括查询操作和修改操作两大部分。其中选择、投影、并、差、笛卡尔积是5种基本操作。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="关系的完整性"><a href="#关系的完整性" class="headerlink" title="关系的完整性"></a>关系的完整性</h2><blockquote>
+<p>关系模式中有三类完整性约束：实体完整性、参照完整性和用户定义的完整性。</p>
+</blockquote>
+<ol>
+<li>实体完整性：若属性A是基本关系R的主属性，则A不能取空值。</li>
+<li>参照完整性：F是R的外码，它与基本关系S的主码$k_{s}$相对应，则R中的每个元组在F上的值必须满足：或者取空值(F的每个属性值均为空值)，或者等于S中某个云组的主码值。</li>
+<li>用户定义的完整性：自己定义就行。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一章：绪论</title>
+    <url>/2021/12/06/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><blockquote>
+<p>简单弄清楚data、DB、DBMS、DBS之间的关系</p>
+</blockquote>
+<h2 id="数据库系统的特点-重点"><a href="#数据库系统的特点-重点" class="headerlink" title="数据库系统的特点(重点)"></a>数据库系统的特点(重点)</h2><ol>
+<li>数据结构化：DBS实现整体数据的结构化，这是主要特征之一。所谓的整体是指数据库中的数据不再仅仅针对某个应用，而是面向整个整体。不仅数据内部是结构化的，而且整体也是结构化，数据之间具有联系。</li>
+<li>数据的共享性高，冗余度低且易扩充。</li>
+<li>数据独立性高：物理独立和逻辑独立。物理独立性是指用户的应用程序与数据库中的数据的物理存储是相互独立的。逻辑独立性是指用户的应用程序与数据库的逻辑结构是相互独立的。</li>
+<li>数据由DBMS统一控制和管理。</li>
+</ol>
+<span id="more"></span>
+
+<h1 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h1><h2 id="两类数据模型"><a href="#两类数据模型" class="headerlink" title="两类数据模型"></a>两类数据模型</h2><ol>
+<li>概念模型：就是对现实的抽象，也叫做信息模型。</li>
+<li>逻辑模型：主要分为层次模型、网状模型、关系模型等，主要是抽象出来给计算机系统建模使用。</li>
+<li>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方式和存取方法。</li>
+</ol>
+<h2 id="概念模型"><a href="#概念模型" class="headerlink" title="概念模型"></a>概念模型</h2><h3 id="信息世界中的基本概念"><a href="#信息世界中的基本概念" class="headerlink" title="信息世界中的基本概念"></a>信息世界中的基本概念</h3><ol>
+<li>实体：客观存在并可相互区别的事物称为实体。</li>
+<li>属性：实体所具有的某一特性称为属性。</li>
+<li><strong>码：唯一标识实体的属性集称为码(重点)。</strong></li>
+<li>实体型：</li>
+<li>实体集：</li>
+<li>联系：联系有好多种。</li>
+</ol>
+<h2 id="数据模型的组成元素-重点"><a href="#数据模型的组成元素-重点" class="headerlink" title="数据模型的组成元素(重点)"></a>数据模型的组成元素(重点)</h2><blockquote>
+<p>数据模型通常由数据结构、数据操作和数据的完整性约束三部分组成。</p>
+</blockquote>
+<ol>
+<li>数据结构：描述数据库组成的对象以及对象之间的联系。</li>
+<li>数据操作：分为查询和更新两大类。</li>
+<li>数据的完整性约束条件：就是一组完整性规则，保证数据的正确、有效和相容。</li>
+</ol>
+<h2 id="常用的数据模型"><a href="#常用的数据模型" class="headerlink" title="常用的数据模型"></a>常用的数据模型</h2><blockquote>
+<p>这里讲的数据模型都是逻辑上的，也就是用户眼中看见的。</p>
+</blockquote>
+<h3 id="层次模型"><a href="#层次模型" class="headerlink" title="层次模型"></a>层次模型</h3><ol>
+<li>有且只有一个结点没有双亲结点，这个结点称为根结点。</li>
+<li>根以外的结点有且只有一个双亲结点。</li>
+</ol>
+<h3 id="网状模型"><a href="#网状模型" class="headerlink" title="网状模型"></a>网状模型</h3><ol>
+<li>允许一个以上的结点无双亲。</li>
+<li>一个结点可以有多于一个的双亲。</li>
+</ol>
+<h3 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h3><blockquote>
+<p>每个关系的数据结构是一张规范化的二维表。</p>
+</blockquote>
+<ol>
+<li>关系：一个关系对应通常来说就是一张表。</li>
+<li>元组：表中的一行就是一个元组。</li>
+<li>属性：表中的一列就是一个属性。</li>
+<li>码：表中的某个属性组，可以用来唯一确定一个元组。</li>
+<li>域：一组具有相同数据类型的值的集合。</li>
+<li>分量：元组中的一个属性值。</li>
+</ol>
+<h2 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h2><blockquote>
+<p>模式是相对稳定的，而实例是相对变动的。因为数据库中的数据是在不断更新的。模式反映的是数据的结构以及其联系，二实例反映的是数据库某一时刻的状态。</p>
+</blockquote>
+<h3 id="数据库系统的三级模式结构-重点"><a href="#数据库系统的三级模式结构-重点" class="headerlink" title="数据库系统的三级模式结构(重点)"></a>数据库系统的三级模式结构(重点)</h3><ol>
+<li>模式：也称为逻辑模式，是全体数据的逻辑结构和特征的描述。</li>
+<li>外模式：也称为子模式，或者用户模式，它是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述。</li>
+<li>内模式：存储模式，一个数据库只有一个内模式，它是数据物理结构和存储方式的描述，是数据在数据库内部的组织方式。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>复习</category>
+      </categories>
+      <tags>
+        <tag>sql语言</tag>
+        <tag>知识点</tag>
       </tags>
   </entry>
 </search>
