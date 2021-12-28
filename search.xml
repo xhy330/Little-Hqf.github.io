@@ -402,6 +402,11 @@
 
 <p><strong>思考：</strong></p>
 <p>剪枝参数一定能够提升模型在测试上的表现嘛？</p>
+<h2 id="7-重要属性和接口"><a href="#7-重要属性和接口" class="headerlink" title="7. 重要属性和接口"></a>7. 重要属性和接口</h2><p>属性是在模型训练之后，能够调用查看的模型的各种性质。对决策树来说，最重要的属性就是feature_importances_ 能够查看各个特征对模型的重要性，</p>
+<p>sklearn中许多的算法的接口都是相似的，比如fit、score，几乎对每个算法都可以使用这两个接口，决策树的最常用的接口还有apply和predict。apply中输入测试集并返回每个测试样本所对应的类别的索引，predict输入测试集返回每个测试样本的标签。返回的内容一目了然并且很容易。</p>
+<p><strong>所有的接口中要求输入的X_train，X_test的部分，输入的特征的特征矩阵至少是一个二维矩阵，sklearn不接收任何一维矩阵作为特征矩阵被输入。</strong>如果只有一个特征，那必须使用reshape来增加矩阵的维度。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># apply返回每个测试样本所在叶子节点的索引</span></span><br><span class="line">clf.apply(Xtest)</span><br><span class="line"></span><br><span class="line"><span class="comment"># predict返回每个测试样本的分析/回归结果</span></span><br><span class="line">clf.predict(Xtest)</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>机器学习</category>
