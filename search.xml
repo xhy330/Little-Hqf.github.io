@@ -131,7 +131,7 @@
   <entry>
     <title>sklearn决策树</title>
     <url>/2021/12/28/sklearn%E5%86%B3%E7%AD%96%E6%A0%91/</url>
-    <content><![CDATA[<h1 id="决策树-descision-tree"><a href="#决策树-descision-tree" class="headerlink" title="决策树(descision tree)"></a>决策树(descision tree)</h1><h2 id="1-决策树的基本概念"><a href="#1-决策树的基本概念" class="headerlink" title="1.决策树的基本概念"></a>1.决策树的基本概念</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><p>决策树是一种基本的分类于回归方法，在分类问题中，表示基于特征对实例进行分类的过程。</p>
+    <content><![CDATA[<h1 id="决策树-descision-tree-分类树"><a href="#决策树-descision-tree-分类树" class="headerlink" title="决策树(descision tree)(分类树)"></a>决策树(descision tree)(分类树)</h1><h2 id="1-决策树的基本概念"><a href="#1-决策树的基本概念" class="headerlink" title="1.决策树的基本概念"></a>1.决策树的基本概念</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><p>决策树是一种基本的分类于回归方法，在分类问题中，表示基于特征对实例进行分类的过程。</p>
 <h3 id="1-2-决策树的三个基本步骤"><a href="#1-2-决策树的三个基本步骤" class="headerlink" title="1.2 决策树的三个基本步骤"></a>1.2 决策树的三个基本步骤</h3><ul>
 <li>特征选择</li>
 <li>决策树的生成</li>
@@ -407,7 +407,269 @@
 <p><strong>所有的接口中要求输入的X_train，X_test的部分，输入的特征的特征矩阵至少是一个二维矩阵，sklearn不接收任何一维矩阵作为特征矩阵被输入。</strong>如果只有一个特征，那必须使用reshape来增加矩阵的维度。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># apply返回每个测试样本所在叶子节点的索引</span></span><br><span class="line">clf.apply(Xtest)</span><br><span class="line"></span><br><span class="line"><span class="comment"># predict返回每个测试样本的分析/回归结果</span></span><br><span class="line">clf.predict(Xtest)</span><br></pre></td></tr></table></figure>
 
-]]></content>
+
+
+<h1 id="回归树-DecisonTreeRegressor"><a href="#回归树-DecisonTreeRegressor" class="headerlink" title="回归树(DecisonTreeRegressor)"></a>回归树(DecisonTreeRegressor)</h1><h2 id="1-理论解释"><a href="#1-理论解释" class="headerlink" title="1. 理论解释"></a>1. 理论解释</h2><p>对于分类树来说，它的标签是离散型的，如果标签是连续型的呢？这个时候我们就用到了回归树。</p>
+<p>假设X和Y分别作为输入和输出变量，并且Y是连续变量，给定训练数据集$D={(x_{1}, y_{1}), (x_{2}, y_{2}), \cdots , (x_{N}, y_{N}) }$考虑如何生成回归树</p>
+<ul>
+<li><strong>如何选择划分点？</strong></li>
+<li><strong>如何决定树中叶节点的输出值？</strong></li>
+</ul>
+<p>一个回归树对应着输入空间(特征空间)的一个划分以及在划分单元上的输出值。假设输入空间划分为M个单元$R_{1}, R_{2}, \cdots, R_{M}$，斌且每个单元$R_{m}$上有一个固定的输出值$c_{m}$，所以回归树模型可以表示为：<br>$$<br>f(x)=\sum_{m=1}^Mc_{m}I(x\in R_{m})<br>$$<br>可以用平方误差$\sum_{x_{i}\in R_{m}}(y_{i}-f(x_{i}))^2$来表示回归树对于训练树据的预测误差，用平方误差最小的准则来求解每个单元上的最优输出值。易知，$R_{m}$上的$c_{m}$的最优值$\hat{c}<em>{m}$是$R</em>{m}$上所有的输入实例$x_{i}$对应输出$y_{i}$的均值，即：<br>$$<br>\hat{c}<em>{m} = ave(y</em>{i}|x_{i} \in R_{m})<br>$$</p>
+<ul>
+<li><p><strong>问题1：怎样对输入空间进行划分？即如何选择划分点？</strong></p>
+<p>CART回归树采用启发式的方法对输入空间进行划分，选择第j个变量$x^{(j)}$和它的取值s，作为切分变量和切分点，斌且定义两个区域：<br>$$<br>R_{1}(j,s)={x|x^{(j)} \leq s }和R_{2}(j,s)={x|x^{(j)} &gt; s }<br>$$<br>然后我们就可以寻找到最优切分变量j和最优切分点s。具体求解<br>$$<br>min_{j,s}[min_{c_{1}}\sum_{x_{i}\in R_{1}(j,s)}(y_{i}-c_{1})^2+min_{c_{2}}\sum_{x_{2}\in R_{2}(j,s)}(y_{i}-c_{2})^2]<br>$$<br>对于固定的输入变量j可以找到最优切分点s</p>
+</li>
+<li><p><strong>问题2：如何决定树中叶节点的输出值？</strong></p>
+<p>用选定的最优切分变量j和最优切分点s划分区域并决定相应的输出值：<br>$$<br>\hat{c}<em>{1}=ave(y</em>{i}|x_{i}\in R_{1}(j,s))和\hat{c}<em>{2}=ave(y</em>{i}|x_{i}\in R_{2}(j,s))<br>$$<br>遍历所有的输入变量，找到最优的切分变量j，构成一个对（j, s）。依此将输入空间划分为两个区域。接着，对每个区域重复上述划分过程，直到满足停止条件为止。这样就生成一颗回归树。这样的回归树通常称为最小二乘回归树（least squares regression tree）。</p>
+</li>
+</ul>
+<h2 id="2-算法流程"><a href="#2-算法流程" class="headerlink" title="2. 算法流程"></a>2. 算法流程</h2><p>输入：训练数据集D</p>
+<p>输出：回归树f(x)</p>
+<p>在训练数据集所在的输入空间中，递归地将每个区域划分为两个子区域并决定每个子区域上地输出值，构建二叉决策树：</p>
+<ol>
+<li>选择最优切分变量j和切分点s，求解</li>
+</ol>
+<p>$$<br>min_{j,s}[min_{c_{1}}\sum_{x_{i}\in R_{1}(j,s)}(y_{i}-c_{1})^2+min_{c_{2}}\sum_{x_{2}\in R_{2}(j,s)}(y_{i}-c_{2})^2]<br>$$</p>
+<p>​        遍历变量j，对固定地切分变量j扫描切分点s，使其结果达到最小值的对(j, s)</p>
+<ol start="2">
+<li><p>选定的对(j, s)划分区域并决定相应的输出值：<br>$$<br>R_{1}(j,s)={x|x_{(j)} \leq s }, R_{2}(j, s)={x| x_{j} &gt; s }<br>$$</p>
+<p>$$<br>\hat{c}<em>{m}=\frac{1}{N</em>{m}}\sum_{x_{i}\in R_{m}(j,s)}y_{i}, x\in R_{m}, m=1, 2<br>$$</p>
+</li>
+<li><p>继续对两个子区域调用步骤1和步骤2，知道满足停止条件</p>
+</li>
+<li><p>将输入空间划分为M个区域$R_{1}, R_{2}, \cdots, R_{M}$，生成决策树：<br>$$<br>f(x)=\sum_{m=1}^{M}\hat{c}<em>{m}I(x\in R</em>{m})<br>$$</p>
+</li>
+</ol>
+<h2 id="3-回归树实例"><a href="#3-回归树实例" class="headerlink" title="3. 回归树实例"></a>3. 回归树实例</h2><p>试用平方误差损失准则生成一个二叉回归树</p>
+<table>
+<thead>
+<tr>
+<th>$x_{i}$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$y_{i}$</td>
+<td>4.50</td>
+<td>4.75</td>
+<td>4.91</td>
+<td>5.34</td>
+<td>5.80</td>
+<td>7.05</td>
+<td>7.90</td>
+<td>8.23</td>
+<td>8.70</td>
+<td>9.00</td>
+</tr>
+</tbody></table>
+<p>选择最优切分变量j和切分点s：<br>$$<br>min_{j,s}[min_{c_{1}}\sum_{x_{i}\in R_{1}(j,s)}(y_{i}-c_{1})^2+min_{c_{2}}\sum_{x_{2}\in R_{2}(j,s)}(y_{i}-c_{2})^2]<br>$$<br>其中：</p>
+<p>$c_{1}=ave(y_{i} | x_{i} \in R_{1}(j,s)) 和c_{2}=ave(y_{i} | x_{i} \in R_{2}(j,s))$</p>
+<p>例如，取s=1。此时有$R_{1}={1}, R_{2}={2, 3, 4, 5, 6, 7, 8, 9, 10 }$，这两个区域的输出值分别为：</p>
+<p>$c_{1}=4.50$</p>
+<p>$c_{2}=\frac{1}{9}(4.75+4.91+5.34+5.80+7.05+7.90+8.23+8.70+9.00)=6.85$</p>
+<p>根据上述计算得到下表：</p>
+<table>
+<thead>
+<tr>
+<th>s</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$c_{1}$</td>
+<td>4.50</td>
+<td>4.63</td>
+<td>4.72</td>
+<td>4.88</td>
+<td>5.06</td>
+<td>5.39</td>
+<td>5.75</td>
+<td>5.18</td>
+<td>6.35</td>
+<td>6.62</td>
+</tr>
+<tr>
+<td>$c_{2}$</td>
+<td>6.85</td>
+<td>7.12</td>
+<td>7.43</td>
+<td>7.78</td>
+<td>8.18</td>
+<td>8.46</td>
+<td>8.64</td>
+<td>8.85</td>
+<td>9.00</td>
+<td>0.00</td>
+</tr>
+</tbody></table>
+<p>把$c_{1}, c_{2}$的值带入到均方差中：</p>
+<p>$m(1)=(4.50-4.50)^2+(4.75-6.85)^2+(4.91-6.85)^2+(5.34-6.85)^2+(5.80-6.85)^2+(7.05-6.85)^2+(8.23-6.85)^2+(8.70-6.85)^2+(9.00-6.85)^2$</p>
+<p>其中跟$c_{1}$有关的只有第一项，跟$c_{2}$有关的则是有9项。</p>
+<p>同理，我们可以得知：</p>
+<table>
+<thead>
+<tr>
+<th>s</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>m(s)</td>
+<td>22.65</td>
+<td>17.70</td>
+<td>12.19</td>
+<td>7.38</td>
+<td>3.36</td>
+<td>5.07</td>
+<td>10.05</td>
+<td>15.18</td>
+<td>21.33</td>
+<td>27.63</td>
+</tr>
+</tbody></table>
+<p>显然取s=5时，m(s)有最小，所以第一个最优切分变量为：j=x、最优切分点为：s=5。</p>
+<p>用选定的(j, s)划分区域，并决定输出值：</p>
+<p>两个划分区域分别是：$R_{1}={1,2,3,4,5 }, R_{2}={6,7,8,9,10 }$。输出值用公式：<br>$$<br>\hat{c}<em>{1}=ave(y</em>{i}|x_{i}\in R_{1}(j,s))和\hat{c}<em>{2}=ave(y</em>{i}|x_{i}\in R_{2}(j,s))<br>$$<br>得到$c_{1}=5.06, c_{2}=8.18$</p>
+<p>然后对两个子区域继续调用算法流程中的步骤(1)、（2)</p>
+<p>对$R_{1}$继续划分：</p>
+<table>
+<thead>
+<tr>
+<th>$x_{i}$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$y_{i}$</td>
+<td>4.50</td>
+<td>4.75</td>
+<td>4.91</td>
+<td>5.34</td>
+<td>5.80</td>
+</tr>
+</tbody></table>
+<p>取切分点分别为：[1, 2, 3, 4, 5]，则各个区域的输出值c如下：</p>
+<table>
+<thead>
+<tr>
+<th>s</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$c_{1}$</td>
+<td>4.50</td>
+<td>4.63</td>
+<td>4.72</td>
+<td>4.88</td>
+<td>5.06</td>
+</tr>
+<tr>
+<td>$c_{2}$</td>
+<td>5.20</td>
+<td>5.35</td>
+<td>5.57</td>
+<td>5.80</td>
+<td>0.00</td>
+</tr>
+</tbody></table>
+<p>计算m(s):</p>
+<table>
+<thead>
+<tr>
+<th>s</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>m(s)</td>
+<td>0.67</td>
+<td>0.43</td>
+<td>0.19</td>
+<td>0.37</td>
+<td>1.06</td>
+</tr>
+</tbody></table>
+<p>s=3时，m(3)最小。</p>
+<p>然后进行递归，可以得到完整的二叉回归树。</p>
+<h2 id="4-sklearn中的回归树"><a href="#4-sklearn中的回归树" class="headerlink" title="4.sklearn中的回归树"></a>4.sklearn中的回归树</h2><h3 id="4-1-重要参数，属性和接口"><a href="#4-1-重要参数，属性和接口" class="headerlink" title="4.1 重要参数，属性和接口"></a>4.1 重要参数，属性和接口</h3><ul>
+<li><strong>criterion</strong></li>
+</ul>
+<p>回归树衡量分枝质量的指标，支持的标准有三种：</p>
+<ol>
+<li>输入“mse“使用均方差(MSE)，父节点和叶子节点直接的均方误差的差额将作为特征选择的标准，这种方法通过使用叶子节点的均值来最小化$L_{2}$损失。</li>
+<li>输入”friedman_mse“使用费尔德曼均方误差，这样的指标使用针对潜在分枝种的问题改进方法。</li>
+<li>输入”mae“使用绝对平均误差MAE，这种指标使用叶节点的中值来最小化$L{1}$损失。</li>
+</ol>
+<p><strong>在回归树种，MSE不只是我们的分枝质量衡量标准，也是我们常用的衡量回归树回归质量的指标。</strong></p>
+<p>当我们在交叉验证的时候，或者其他方式获取回归树的结果时候，我们往往会选择均方误差作为我们的评估(score是准确率)。在回归中，我们追求的是MSE越小越好。然后回归树的接口score返回的是$R^2$而不是<strong>MSE</strong>。<br>$$<br>R^2=1-\frac{u}{v}<br>$$<br>$u=\sum_{i=1}^{N}(f_{i}-y_{i})^2,v=\sum_{i=1}^{N}(y_{i}-\bar{y_{i}})^2$</p>
+<p>其中u是残差平方和，v是总平方和。</p>
+<h3 id="4-2-交叉验证"><a href="#4-2-交叉验证" class="headerlink" title="4.2 交叉验证"></a>4.2 交叉验证</h3><p>对于模型的训练，我们最简单的想法就行把整个数据集分成两个部分，一部分用于训练，另一部分用于验证，也就是常说的训练集和测试集。</p>
+<p>这样会有一个弊端，也就是模型与参数的选取将极大程度依赖于对训练集和测试集的划分。不同划分下，TEST的MSE的变动是很大的，而且对应的最优degree也是不一样的。如果我们对于训练集和测试集的划分方法不够好，很可能不能得到最好的模型和参数。</p>
+<h4 id="4-2-1-LOOCV"><a href="#4-2-1-LOOCV" class="headerlink" title="4.2.1 LOOCV"></a>4.2.1 LOOCV</h4><p>LOOCV也包含将数据集分成训练集和测试集这一步骤。但是不同的是，我们只用一个数据作为测试集，其他剩余的数据都作为训练集，并且将此步骤重复N次。(N是数据集的数据量)</p>
+<p>就比如于n个数据{1, 2, 3, …, n}，LOOCV的方法就是每次取一个数据作为测试集的唯一元素，而其他的n-1个数据作为训练集用于训练模型和调参。比如第一次用1来作为测试集，则剩下的数据{2, 3, 4, …, n}就可以作为它的训练集，依次类推，直到用n来作为测试集，剩下的数据作为训练集为止。结果就是我们最终训练了n个模型，每次都能得到一个MSE。最终test MSE则就是将这n个MSE取平均。<br>$$<br>CV_{n} = \frac{1}{n}\sum_{i=1}^{n}MSE_{i}<br>$$</p>
+<ul>
+<li>优点：首先它不受测试集合训练集划分方法的影响，因为每一个数据都单独的做过测试集。同时，其用了n-1个数据训练模型，也几乎用到了所有的数据，保证了模型的bias更小。</li>
+<li>缺点：那就是计算量过于大，是test set approach耗时的n-1倍。</li>
+</ul>
+<p>为了解决计算成本太大的弊端，对算法进行更进，使得LOOCV计算成本和只训练一个模型一样快。<br>$$<br>CV_{n}=\frac{1}{n}\sum_{i=1}^{n}(\frac{y_{i}-\hat{y_{i}}}{1-h_{i}})^{2}<br>$$</p>
+<h4 id="4-2-2-k-fold-Cross-Validation"><a href="#4-2-2-k-fold-Cross-Validation" class="headerlink" title="4.2.2 k-fold Cross Validation"></a>4.2.2 k-fold Cross Validation</h4><p>k折交叉验证和LOOCV的不同在于，我们每次的测试集不再只包含一个数据，而是多个，具体数目将根据K的选取来决定。比如，k=5，那么我们利用五折交叉验证的步骤就是：</p>
+<ol>
+<li><p>将所有数据集分成5份</p>
+</li>
+<li><p>不重复地每次取其中一份作为测试集，用其他四份作训练集训练模型，之后计算该模型在测试集上的$MSE_{i}$</p>
+</li>
+<li><p>将5次的$MSE_{i}$取平均得到最后的MSE<br>$$<br>CV_{k} = \frac{1}{k}\sum_{i=1}^{k}MSE_{i}<br>$$</p>
+</li>
+</ol>
+<p>不难理解，其实LOOCV是一种特殊的k-fold Cross Validation (K=N)。</p>
+<h4 id="4-2-3-Bias-Variance-Trade-Off-for-k-Fold-Cross-Validation"><a href="#4-2-3-Bias-Variance-Trade-Off-for-k-Fold-Cross-Validation" class="headerlink" title="4.2.3 Bias-Variance Trade-Off for k-Fold Cross-Validation"></a>4.2.3 Bias-Variance Trade-Off for k-Fold Cross-Validation</h4><p>最后，我们要说说K的选取。事实上，和开头给出的文章里的部分内容一样，K的选取是一个Bias和Variance的trade-off。</p>
+<p>K越大，每次投入的训练集的数据越多，模型的Bias越小。<strong>但是K越大，又意味着每一次选取的训练集之前的相关性越大</strong>（考虑最极端的例子，当k=N，也就是在LOOCV里，每次都训练数据几乎是一样的）。而这种大相关性会导致最终的test error具有更大的Variance。</p>
+<p>一般来说，根据经验我们一般选择k=5或10。</p>
+<h4 id="4-2-4-sklearn种交叉验证的实现"><a href="#4-2-4-sklearn种交叉验证的实现" class="headerlink" title="4.2.4 sklearn种交叉验证的实现"></a>4.2.4 sklearn种交叉验证的实现</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line"></span><br><span class="line">boston = load_boston()</span><br><span class="line">regressor = DecisionTreeRegressor(random_state=<span class="number">0</span>)</span><br><span class="line">cross_val_score(regressor, boston.data, boston.target, cv=<span class="number">5</span>,</span><br><span class="line">                scoring=<span class="string">&#x27;neg_mean_squared_error&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在cross_val_score这个函数中，regressor是任一构建好的模型实例，可是是SVM等等，后两个参数直接输人原始数据，不需要有任何改动或者划分。cv参数就是将数据集划分的个数。因为在回归树中，我们一般是看其MSE，所以加上scoring参数，要不然返回的就是得分。</p>
+<h2 id="5-回归树的简单实例"><a href="#5-回归树的简单实例" class="headerlink" title="5.回归树的简单实例"></a>5.回归树的简单实例</h2>]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
