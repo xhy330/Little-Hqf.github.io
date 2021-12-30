@@ -239,7 +239,8 @@
 <li>输入‘entropy’，使用<strong>信息熵</strong></li>
 <li>输入‘gini’，使用基尼系数</li>
 </ol>
-<p>$$<br>Entropy(t)=-\sum_{i=0}^{c-1}p(i|t)log_{2}p(i|t) \<br>Gini(t)=1-\sum_{i=0}^{c-1}p(i|t)^2<br>$$</p>
+<p>$$<br>Entropy(t)=-\sum_{i=0}^{c-1}p(i|t)log_{2}p(i|t)<br>$$</p>
+<p>$$<br>Gini(t)=1-\sum_{i=0}^{c-1}p(i|t)^2<br>$$</p>
 <p>其中$t$代表给定的节点(上述中的数据集D)，$i$代表标签的任意分类，$P(i|t)$代表标签分类$i$在节点$t$上所占的比例。sklearn实际计算的是基于信息熵的<strong>信息增益</strong>，即是父节点的信息熵和子节点的信息熵之差。</p>
 <p>信息熵对不纯度更加敏感，对不纯度的惩罚最强。但是在实际应用中，<strong>信息熵和基尼系数基本相同</strong>。信息熵涉及到了对数，所以它的计算会比基尼系数要慢一些。信息熵更敏感，所以信息熵作为指标时，决策树会更加“精细”，因此对于高维数据或者噪声很多的数据时，防止过拟合，基尼系数会比较好，但并不是绝对的。</p>
 <table>
@@ -415,13 +416,13 @@
 <li><strong>如何选择划分点？</strong></li>
 <li><strong>如何决定树中叶节点的输出值？</strong></li>
 </ul>
-<p>一个回归树对应着输入空间(特征空间)的一个划分以及在划分单元上的输出值。假设输入空间划分为M个单元$R_{1}, R_{2}, \cdots, R_{M}$，斌且每个单元$R_{m}$上有一个固定的输出值$c_{m}$，所以回归树模型可以表示为：<br>$$<br>f(x)=\sum_{m=1}^Mc_{m}I(x\in R_{m})<br>$$<br>可以用平方误差$\sum_{x_{i}\in R_{m}}(y_{i}-f(x_{i}))^2$来表示回归树对于训练树据的预测误差，用平方误差最小的准则来求解每个单元上的最优输出值。易知，$R_{m}$上的$c_{m}$的最优值$\hat{c}<em>{m}$是$R</em>{m}$上所有的输入实例$x_{i}$对应输出$y_{i}$的均值，即：<br>$$<br>\hat{c}<em>{m} = ave(y</em>{i}|x_{i} \in R_{m})<br>$$</p>
+<p>一个回归树对应着输入空间(特征空间)的一个划分以及在划分单元上的输出值。假设输入空间划分为M个单元$R_{1}, R_{2}, \cdots, R_{M}$，斌且每个单元$R_{m}$上有一个固定的输出值$c_{m}$，所以回归树模型可以表示为：<br>$$<br>f(x)=\sum_{m=1}^Mc_{m}I(x\in R_{m})<br>$$<br>可以用平方误差$\sum_{x_{i}\in R_{m}}(y_{i}-f(x_{i}))^2$来表示回归树对于训练树据的预测误差，用平方误差最小的准则来求解每个单元上的最优输出值。易知，$R_{m}$上的$c_{m}$的最优值$\hat{c}_m$是$R_m$上所有的输入实例$x_i$对应输出$y_i$的均值，即：<br>$$<br>\hat{c}_m = ave(y_i|x_i \in R_m)<br>$$</p>
 <ul>
 <li><p><strong>问题1：怎样对输入空间进行划分？即如何选择划分点？</strong></p>
-<p>CART回归树采用启发式的方法对输入空间进行划分，选择第j个变量$x^{(j)}$和它的取值s，作为切分变量和切分点，斌且定义两个区域：<br>$$<br>R_{1}(j,s)={x|x^{(j)} \leq s }和R_{2}(j,s)={x|x^{(j)} &gt; s }<br>$$<br>然后我们就可以寻找到最优切分变量j和最优切分点s。具体求解<br>$$<br>min_{j,s}[min_{c_{1}}\sum_{x_{i}\in R_{1}(j,s)}(y_{i}-c_{1})^2+min_{c_{2}}\sum_{x_{2}\in R_{2}(j,s)}(y_{i}-c_{2})^2]<br>$$<br>对于固定的输入变量j可以找到最优切分点s</p>
+<p>CART回归树采用启发式的方法对输入空间进行划分，选择第j个变量$x^{(j)}$和它的取值s，作为切分变量和切分点，斌且定义两个区域：<br>$$<br>R_{1}(j,s)=(x|x^{(j)} \leq s)和R_{2}(j,s)=(x|x^{(j)} &gt; s )<br>$$<br>然后我们就可以寻找到最优切分变量j和最优切分点s。具体求解<br>$$<br>min_{j,s}[min_{c_{1}}\sum_{x_{i}\in R_{1}(j,s)}(y_{i}-c_{1})^2+min_{c_{2}}\sum_{x_{2}\in R_{2}(j,s)}(y_{i}-c_{2})^2]<br>$$<br>对于固定的输入变量j可以找到最优切分点s</p>
 </li>
 <li><p><strong>问题2：如何决定树中叶节点的输出值？</strong></p>
-<p>用选定的最优切分变量j和最优切分点s划分区域并决定相应的输出值：<br>$$<br>\hat{c}<em>{1}=ave(y</em>{i}|x_{i}\in R_{1}(j,s))和\hat{c}<em>{2}=ave(y</em>{i}|x_{i}\in R_{2}(j,s))<br>$$<br>遍历所有的输入变量，找到最优的切分变量j，构成一个对（j, s）。依此将输入空间划分为两个区域。接着，对每个区域重复上述划分过程，直到满足停止条件为止。这样就生成一颗回归树。这样的回归树通常称为最小二乘回归树（least squares regression tree）。</p>
+<p>用选定的最优切分变量j和最优切分点s划分区域并决定相应的输出值：<br>$$<br>\hat{c}_1 =ave(y_i | x_i \in R_1 (j,s) ) 和 \hat{c}_2=ave (y_i |x_i \in R_2 (j,s) )<br>$$<br>遍历所有的输入变量，找到最优的切分变量j，构成一个对（j, s）。依此将输入空间划分为两个区域。接着，对每个区域重复上述划分过程，直到满足停止条件为止。这样就生成一颗回归树。这样的回归树通常称为最小二乘回归树（least squares regression tree）。</p>
 </li>
 </ul>
 <h2 id="2-算法流程"><a href="#2-算法流程" class="headerlink" title="2. 算法流程"></a>2. 算法流程</h2><p>输入：训练数据集D</p>
@@ -433,12 +434,12 @@
 <p>$$<br>min_{j,s}[min_{c_{1}}\sum_{x_{i}\in R_{1}(j,s)}(y_{i}-c_{1})^2+min_{c_{2}}\sum_{x_{2}\in R_{2}(j,s)}(y_{i}-c_{2})^2]<br>$$</p>
 <p>​        遍历变量j，对固定地切分变量j扫描切分点s，使其结果达到最小值的对(j, s)</p>
 <ol start="2">
-<li><p>选定的对(j, s)划分区域并决定相应的输出值：<br>$$<br>R_{1}(j,s)={x|x_{(j)} \leq s }, R_{2}(j, s)={x| x_{j} &gt; s }<br>$$</p>
-<p>$$<br>\hat{c}<em>{m}=\frac{1}{N</em>{m}}\sum_{x_{i}\in R_{m}(j,s)}y_{i}, x\in R_{m}, m=1, 2<br>$$</p>
+<li><p>选定的对(j, s)划分区域并决定相应的输出值：<br>$$<br>R_1(j,s)={ x|x_(j) \leq s }, R_2(j, s)=(x| x_j &gt; s )<br>$$</p>
+<p>其中对于上式有：<br>$$<br>\hat{c}<em>m= \frac{1}{N_m}\sum</em>{x_i\in R_m(j,s)} y_i, x_i\in R_m, m=1,2<br>$$</p>
 </li>
 <li><p>继续对两个子区域调用步骤1和步骤2，知道满足停止条件</p>
 </li>
-<li><p>将输入空间划分为M个区域$R_{1}, R_{2}, \cdots, R_{M}$，生成决策树：<br>$$<br>f(x)=\sum_{m=1}^{M}\hat{c}<em>{m}I(x\in R</em>{m})<br>$$</p>
+<li><p>将输入空间划分为M个区域$R_{1}, R_{2}, \cdots, R_{M}$，生成决策树：<br>$$<br>f(x)=\sum_{m=1}^M\hat{c}_mI(x\in R_m)<br>$$</p>
 </li>
 </ol>
 <h2 id="3-回归树实例"><a href="#3-回归树实例" class="headerlink" title="3. 回归树实例"></a>3. 回归树实例</h2><p>试用平方误差损失准则生成一个二叉回归树</p>
@@ -669,7 +670,7 @@
 <h4 id="4-2-4-sklearn种交叉验证的实现"><a href="#4-2-4-sklearn种交叉验证的实现" class="headerlink" title="4.2.4 sklearn种交叉验证的实现"></a>4.2.4 sklearn种交叉验证的实现</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line"></span><br><span class="line">boston = load_boston()</span><br><span class="line">regressor = DecisionTreeRegressor(random_state=<span class="number">0</span>)</span><br><span class="line">cross_val_score(regressor, boston.data, boston.target, cv=<span class="number">5</span>,</span><br><span class="line">                scoring=<span class="string">&#x27;neg_mean_squared_error&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>在cross_val_score这个函数中，regressor是任一构建好的模型实例，可是是SVM等等，后两个参数直接输人原始数据，不需要有任何改动或者划分。cv参数就是将数据集划分的个数。因为在回归树中，我们一般是看其MSE，所以加上scoring参数，要不然返回的就是得分。</p>
-<h2 id="5-回归树的简单实例"><a href="#5-回归树的简单实例" class="headerlink" title="5.回归树的简单实例"></a>5.回归树的简单实例</h2>]]></content>
+]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
